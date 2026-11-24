@@ -1,0 +1,2376 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holistic Healing: Counseling &amp; Consulting, LLC | Dr. Sierra Barnes, Ph.D., LPC, LPC-S</title>
+  <meta name="description" content="Whole-person individual, couples, family, group, and telehealth counseling with Dr. Sierra Barnes, Ph.D., LPC, LPC-S. Licensed in South Carolina and Texas." />
+
+  <!-- Google Fonts: Lora (Headings) & DM Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#F8F5EE',
+            'ivory-warm': '#F1EBE0',
+            eucalyptus: '#E2EAE2',
+            'eucalyptus-soft': '#EDF2EC',
+            sage: '#8EA38E',
+            'sage-soft': '#B9C7B7',
+            forest: '#223B2F',
+            'forest-deep': '#182B22',
+            terracotta: '#C47D61',
+            'coral-brand': '#E97676',
+            'rose-brand': '#C84B75',
+            'blush-soft': '#F6E6EA',
+            charcoal: '#2C302D',
+            'charcoal-muted': '#555C57'
+          },
+          fontFamily: {
+            serif: ['Lora', 'Georgia', 'serif'],
+            sans: ['DM Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Base Editorial Styling */
+    body {
+      background-color: #F8F5EE;
+      color: #2C302D;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .font-serif {
+      font-family: 'Lora', Georgia, serif;
+      font-weight: 500;
+    }
+
+    /* Organic Irregular Shapes */
+    .organic-pebble {
+      border-radius: 58% 42% 52% 48% / 44% 55% 45% 56%;
+    }
+    .organic-arch {
+      border-radius: 52% 48% 36% 64% / 58% 54% 46% 42%;
+    }
+    .organic-leaf {
+      border-radius: 66% 34% 62% 38% / 38% 64% 36% 62%;
+    }
+    .organic-pill-a {
+      border-radius: 2.25rem 3.5rem 2.5rem 3rem / 2.5rem 2.25rem 3rem 2.75rem;
+    }
+    .organic-pill-b {
+      border-radius: 3.25rem 2.25rem 3rem 2.5rem / 2.75rem 3rem 2.25rem 2.5rem;
+    }
+
+    /* Page View Switching */
+    .page-view {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.45s ease;
+    }
+    .page-view.active {
+      display: block;
+      opacity: 1;
+    }
+
+    /* Gentle Scroll Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Subtle Botanical Float */
+    @keyframes gentleFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    .float-slow {
+      animation: gentleFloat 7s ease-in-out infinite;
+    }
+
+    /* Mindful 4-4-4 Breathing Orb States */
+    .breath-ring {
+      transition: transform 4s cubic-bezier(0.4, 0, 0.2, 1), opacity 4s ease;
+      transform: scale(0.86);
+    }
+    .breath-ring.inhale {
+      transform: scale(1.16);
+      opacity: 0.95;
+    }
+    .breath-ring.hold {
+      transform: scale(1.16);
+      opacity: 0.85;
+    }
+    .breath-ring.exhale {
+      transform: scale(0.84);
+      opacity: 0.65;
+    }
+
+    /* Mood Illustration Transition */
+    .mood-visual-wrap {
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    /* FAQ Accordion Smooth Transition */
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, opacity 0.35s ease;
+      opacity: 0;
+    }
+    .faq-item[data-open="true"] .faq-content {
+      max-height: 360px;
+      opacity: 1;
+    }
+    .faq-item[data-open="true"] .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    /* Accessible Focus Ring */
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 2px solid #C84B75;
+      outline-offset: 3px;
+    }
+
+    /* Respect Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .float-slow, .breath-ring, .mood-visual-wrap {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+      }
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body class="bg-ivory text-charcoal selection:bg-blush-soft selection:text-forest">
+
+  <!-- Skip to Content Link for Accessibility -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-forest focus:text-ivory focus:px-4 focus:py-2 focus:rounded-full">
+    Skip to main content
+  </a>
+
+  <!-- =========================================================
+       FLOATING GLASSMORPHIC PILL HEADER NAVIGATION
+       ========================================================= -->
+  <header class="fixed top-3 sm:top-4 inset-x-0 z-50 px-3 sm:px-6 pointer-events-none">
+    <div class="max-w-7xl mx-auto pointer-events-auto">
+      <nav aria-label="Primary Navigation" class="flex items-center justify-between gap-3 px-4 sm:px-6 py-2.5 rounded-full bg-ivory/72 backdrop-blur-xl border border-white/75 shadow-[0_12px_34px_rgba(34,59,47,0.09)]">
+
+        <!-- Official Brand Emblem & Name (Background-Free SVG) -->
+        <a href="#home" data-page-link="home" class="flex items-center gap-2.5 shrink-0 group">
+          <svg viewBox="0 0 180 120" class="w-10 h-7 sm:w-11 sm:h-8 shrink-0 transition-transform duration-300 group-hover:scale-105" role="img" aria-label="Holistic Healing Counseling emblem: coral heart cradled by rose cupped hands">
+            <!-- Soft Coral Heart -->
+            <path d="M90 83 C86 79 60 54 60 32 C60 18 71 10 81 13 C86 15 89 19 90 23 C91 19 94 15 99 13 C109 10 120 18 120 32 C120 54 94 79 90 83 Z" fill="#E97676" />
+            <!-- Left Cupped Hand & Botanical Fingers -->
+            <path d="M87 112 C88 100 86 87 77 77 C69 68 57 62 46 57 C43 56 42 60 45 63 C52 69 60 74 60 82 C60 90 50 94 38 90 C28 86 19 77 12 69 C9 66 5 69 8 73 C14 82 22 94 31 99 C48 105 68 108 87 112 Z" fill="#C84B75" />
+            <path d="M35 84 C27 76 20 65 18 52 C26 57 33 68 35 84 Z" fill="#C84B75" />
+            <path d="M40 82 C34 73 30 62 30 51 C38 57 42 68 40 82 Z" fill="#C84B75" />
+            <path d="M45 84 C43 74 42 64 46 55 C51 63 51 74 45 84 Z" fill="#C84B75" />
+            <!-- Right Cupped Hand & Botanical Fingers -->
+            <path d="M93 112 C92 100 94 87 103 77 C111 68 123 62 134 57 C137 56 138 60 135 63 C128 69 120 74 120 82 C120 90 130 94 142 90 C152 86 161 77 168 69 C171 66 175 69 172 73 C166 82 158 94 149 99 C132 105 112 108 93 112 Z" fill="#C84B75" />
+            <path d="M145 84 C153 76 160 65 162 52 C154 57 147 68 145 84 Z" fill="#C84B75" />
+            <path d="M140 82 C146 73 150 62 150 51 C142 57 138 68 140 82 Z" fill="#C84B75" />
+            <path d="M135 84 C137 74 138 64 134 55 C129 63 129 74 135 84 Z" fill="#C84B75" />
+          </svg>
+          <div class="leading-tight whitespace-nowrap">
+            <span class="block font-serif text-sm sm:text-base text-forest tracking-tight">Holistic Healing</span>
+            <span class="block text-[10px] uppercase tracking-[0.14em] text-charcoal-muted">Counseling &amp; Consulting</span>
+          </div>
+        </a>
+
+        <!-- Desktop Single-Line Navigation -->
+        <div class="hidden lg:flex items-center justify-center gap-3.5 xl:gap-6">
+          <a href="#home" data-page-link="home" class="nav-link whitespace-nowrap shrink-0 text-xs xl:text-sm text-forest hover:text-rose-brand transition-colors">Home</a>
+          <a href="#about" data-page-link="about" class="nav-link whitespace-nowrap shrink-0 text-xs xl:text-sm text-charcoal-muted hover:text-rose-brand transition-colors">About</a>
+          <a href="#services-page" data-page-link="services" class="nav-link whitespace-nowrap shrink-0 text-xs xl:text-sm text-charcoal-muted hover:text-rose-brand transition-colors">Services</a>
+          <a href="#approach" data-page-link="approach" class="nav-link whitespace-nowrap shrink-0 text-xs xl:text-sm text-charcoal-muted hover:text-rose-brand transition-colors">Our Approach</a>
+          <a href="#community" data-page-link="community" class="nav-link whitespace-nowrap shrink-0 text-xs xl:text-sm text-charcoal-muted hover:text-rose-brand transition-colors">Events &amp; Resources</a>
+          <a href="#getting-started" data-page-link="home" data-anchor="#getting-started" class="nav-link whitespace-nowrap shrink-0 text-xs xl:text-sm text-charcoal-muted hover:text-rose-brand transition-colors">Getting Started</a>
+          <a href="#contact" data-page-link="home" data-anchor="#contact" class="nav-link whitespace-nowrap shrink-0 text-xs xl:text-sm text-charcoal-muted hover:text-rose-brand transition-colors">Contact</a>
+        </div>
+
+        <!-- Desktop Consultation CTA -->
+        <div class="hidden lg:flex items-center shrink-0">
+          <a href="#contact" data-page-link="home" data-anchor="#contact" class="whitespace-nowrap shrink-0 bg-forest text-ivory text-xs xl:text-sm px-5 py-2.5 rounded-full hover:bg-forest-deep transition-colors shadow-sm">
+            Book a Consultation
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full text-forest hover:bg-eucalyptus/70 transition-colors">
+          <svg id="menu-icon-open" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M4 7h16M4 12h16M4 17h12" />
+          </svg>
+          <svg id="menu-icon-close" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M6 6l12 12M18 6l-12 12" />
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Rounded Glassmorphic Mobile Drawer -->
+      <div id="mobile-menu" class="hidden lg:hidden mt-2.5 p-5 rounded-3xl bg-ivory/90 backdrop-blur-xl border border-white/75 shadow-[0_18px_40px_rgba(34,59,47,0.12)]">
+        <div class="flex flex-col space-y-1.5">
+          <a href="#home" data-page-link="home" class="px-4 py-2.5 rounded-full text-sm text-forest hover:text-rose-brand hover:bg-blush-soft/70 transition-colors">Home</a>
+          <a href="#about" data-page-link="about" class="px-4 py-2.5 rounded-full text-sm text-charcoal hover:text-rose-brand hover:bg-blush-soft/70 transition-colors">About Dr. Barnes</a>
+          <a href="#services-page" data-page-link="services" class="px-4 py-2.5 rounded-full text-sm text-charcoal hover:text-rose-brand hover:bg-blush-soft/70 transition-colors">Counseling Services</a>
+          <a href="#approach" data-page-link="approach" class="px-4 py-2.5 rounded-full text-sm text-charcoal hover:text-rose-brand hover:bg-blush-soft/70 transition-colors">Our Approach</a>
+          <a href="#community" data-page-link="community" class="px-4 py-2.5 rounded-full text-sm text-charcoal hover:text-rose-brand hover:bg-blush-soft/70 transition-colors">Events &amp; Resources</a>
+          <a href="#getting-started" data-page-link="home" data-anchor="#getting-started" class="px-4 py-2.5 rounded-full text-sm text-charcoal hover:text-rose-brand hover:bg-blush-soft/70 transition-colors">Getting Started</a>
+          <a href="#contact" data-page-link="home" data-anchor="#contact" class="px-4 py-2.5 rounded-full text-sm text-charcoal hover:text-rose-brand hover:bg-blush-soft/70 transition-colors">Contact</a>
+          <div class="pt-2">
+            <a href="#contact" data-page-link="home" data-anchor="#contact" class="block text-center bg-forest text-ivory text-sm px-5 py-3 rounded-full hover:bg-forest-deep transition-colors">
+              Book a Consultation
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- =========================================================
+         PAGE 1: HOMEPAGE (Calm, Visual-First, Flowing Editorial)
+         ========================================================= -->
+    <div id="page-home" class="page-view active">
+
+      <!-- 1. HERO SECTION -->
+      <section id="home" class="relative pt-28 sm:pt-36 pb-16 sm:pb-24 overflow-hidden">
+        <!-- Soft Organic Background Wash -->
+        <div aria-hidden="true" class="pointer-events-none absolute -top-24 -right-24 w-[420px] h-[420px] sm:w-[580px] sm:h-[580px] rounded-full bg-eucalyptus/75 blur-3xl"></div>
+        <div aria-hidden="true" class="pointer-events-none absolute top-40 -left-24 w-[320px] h-[320px] rounded-full bg-blush-soft/70 blur-3xl"></div>
+
+        <div class="max-w-6xl mx-auto px-5 sm:px-8 relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+
+            <!-- Left Column: Concise, Reassuring Messaging -->
+            <div class="lg:col-span-6 space-y-6">
+              <p class="inline-flex items-center gap-2.5 text-xs uppercase tracking-[0.16em] text-rose-brand">
+                <span class="w-6 h-[1.5px] bg-coral-brand inline-block"></span>
+                <span>In-Office &amp; Telehealth &bull; SC &amp; TX</span>
+              </p>
+
+              <h1 class="font-serif text-3xl sm:text-4xl lg:text-[2.65rem] text-forest leading-[1.22]">
+                True healing considers the whole person, not just their parts.
+              </h1>
+
+              <p class="text-base sm:text-[1.05rem] text-charcoal-muted leading-relaxed max-w-lg">
+                A grounded, confidential space with Dr. Sierra Barnes, Ph.D., LPC, LPC-S—supporting you as you quiet anxiety, process life’s weight, and move toward lasting emotional peace.
+              </p>
+
+              <div class="flex flex-wrap items-center gap-4 pt-2">
+                <a href="#contact" data-page-link="home" data-anchor="#contact" class="inline-flex items-center gap-2 bg-forest text-ivory text-sm sm:text-base px-7 py-3.5 rounded-full hover:bg-forest-deep transition-colors shadow-sm">
+                  <span>Begin Your Journey</span>
+                  <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 10h12M11 5l5 5-5 5" />
+                  </svg>
+                </a>
+                <a href="#services" class="inline-flex items-center gap-2 text-sm sm:text-base text-forest px-5 py-3.5 rounded-full bg-eucalyptus/65 hover:bg-eucalyptus transition-colors">
+                  <span>Explore Counseling</span>
+                </a>
+              </div>
+
+              <!-- Subtle Credential Strip -->
+              <div class="pt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-charcoal-muted">
+                <span>Ph.D. Counselor Ed. &amp; Supervision</span>
+                <span aria-hidden="true" class="text-coral-brand">&bull;</span>
+                <span>Licensed in South Carolina &amp; Texas</span>
+              </div>
+            </div>
+
+            <!-- Right Column: Layered Custom Illustration + Sunlit Organic Photograph -->
+            <div class="lg:col-span-6 relative flex items-center justify-center">
+              <div class="group relative w-full max-w-[460px] aspect-[4/4.3] flex items-center justify-center">
+
+                <!-- Back Organic Shape & Subtle Dotted Botanical Ring -->
+                <div aria-hidden="true" class="absolute inset-4 organic-arch bg-gradient-to-br from-eucalyptus/90 via-ivory-warm/70 to-blush-soft/75 transition-transform duration-700 ease-out group-hover:scale-105"></div>
+                <div aria-hidden="true" class="absolute inset-7 organic-pebble border border-dashed border-coral-brand/40 float-slow"></div>
+
+                <!-- Warm Sunlit Counseling Sanctuary Photograph (Organic Mask + Hover Zoom) -->
+                <div class="relative z-10 w-[74%] h-[78%] organic-pebble overflow-hidden shadow-[0_24px_50px_rgba(34,59,47,0.12)] border-4 border-ivory float-slow">
+                  <img
+                    src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=80"
+                    alt="Warm, sunlit peaceful counseling sanctuary with a cozy armchair, natural daylight, and soft greenery"
+                    class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                    onerror="this.src='https://placehold.co/600x700/E2EAE2/223B2F?text=Calm+Sanctuary'"
+                  />
+                  <!-- Soft Warm Tint for Palette Harmony -->
+                  <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-forest/15 via-transparent to-coral-brand/10"></div>
+                </div>
+
+                <!-- Overlapping Custom Editorial Botanical Illustration -->
+                <svg viewBox="0 0 260 280" class="float-slow absolute -bottom-4 -left-4 sm:-left-6 z-20 w-44 sm:w-52 h-auto drop-shadow-sm" role="img" aria-label="Hand-drawn botanical illustration symbolizing whole-person emotional growth">
+                  <circle cx="122" cy="148" r="78" fill="#F8F5EE" fill-opacity="0.92" />
+                  <circle cx="122" cy="148" r="78" fill="none" stroke="#8EA38E" stroke-width="1.2" stroke-dasharray="4 6" />
+                  <!-- Stem & Leaves -->
+                  <path d="M122,220 C122,175 118,132 126,74" fill="none" stroke="#223B2F" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M121,176 C84,168 68,142 82,124 C104,132 118,154 121,176 Z" fill="#8EA38E" fill-opacity="0.45" stroke="#223B2F" stroke-width="1.3" />
+                  <path d="M122,146 C158,136 176,112 162,94 C140,104 126,124 122,146 Z" fill="#E97676" fill-opacity="0.35" stroke="#223B2F" stroke-width="1.3" />
+                  <path d="M125,104 C104,88 106,62 126,48 C144,62 142,88 125,104 Z" fill="#C47D61" fill-opacity="0.32" stroke="#223B2F" stroke-width="1.3" />
+                  <circle cx="164" cy="166" r="10" fill="#E97676" fill-opacity="0.45" />
+                  <circle cx="80" cy="96" r="6" fill="#C84B75" fill-opacity="0.4" />
+                </svg>
+
+                <!-- Floating Organic Quote Pebble -->
+                <div class="hidden sm:block absolute -top-2 -right-2 z-20 bg-ivory/92 backdrop-blur-md px-5 py-3.5 rounded-3xl border border-sage-soft/50 shadow-sm max-w-[205px]">
+                  <p class="font-serif italic text-xs text-forest leading-relaxed">
+                    “Your healing journey starts here—at your own steady pace.”
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Organic Wave Transition: Ivory -> Soft Eucalyptus -->
+      <div aria-hidden="true" class="w-full overflow-hidden leading-none bg-ivory">
+        <svg viewBox="0 0 1440 84" fill="none" preserveAspectRatio="none" class="w-full h-12 sm:h-16">
+          <path d="M0,48 C320,96 720,0 1120,44 C1280,62 1380,54 1440,38 L1440,84 L0,84 Z" fill="#EDF2EC" />
+        </svg>
+      </div>
+
+      <!-- 2. A SPACE TO EXHALE (Visual-First Interactive Engagement Sanctuary) -->
+      <section aria-label="A Space to Exhale" class="relative bg-eucalyptus-soft py-16 sm:py-24 overflow-hidden">
+        <div class="max-w-5xl mx-auto px-5 sm:px-8">
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center reveal">
+
+            <!-- Left: Interactive 4-4-4 Mindful Breathing Visualizer -->
+            <div class="lg:col-span-5 flex flex-col items-center text-center">
+              <span class="text-xs uppercase tracking-[0.18em] text-rose-brand mb-4">A Space to Exhale</span>
+
+              <div class="relative w-60 h-60 sm:w-64 sm:h-64 flex items-center justify-center">
+                <!-- Outer Animated Breathing Aura -->
+                <div id="breath-aura" aria-hidden="true" class="breath-ring absolute inset-5 rounded-full bg-gradient-to-br from-sage-soft/45 via-blush-soft/55 to-eucalyptus/70"></div>
+                <div id="breath-ring-inner" aria-hidden="true" class="breath-ring absolute inset-11 rounded-full border border-forest/20 bg-ivory/75 backdrop-blur-sm"></div>
+
+                <!-- Center Botanical Lotus Emblem & Phase Cue -->
+                <div class="relative z-10 flex flex-col items-center justify-center px-4">
+                  <svg viewBox="0 0 80 60" class="w-14 h-11 mb-1.5" aria-hidden="true">
+                    <path d="M40,48 C28,42 20,30 22,18 C32,22 38,34 40,48 Z" fill="#8EA38E" fill-opacity="0.5" stroke="#223B2F" stroke-width="1.2" />
+                    <path d="M40,48 C52,42 60,30 58,18 C48,22 42,34 40,48 Z" fill="#8EA38E" fill-opacity="0.5" stroke="#223B2F" stroke-width="1.2" />
+                    <path d="M40,48 C30,36 32,20 40,10 C48,20 50,36 40,48 Z" fill="#E97676" fill-opacity="0.38" stroke="#223B2F" stroke-width="1.2" />
+                  </svg>
+                  <p id="breath-label" class="font-serif text-lg text-forest">Pause &amp; Breathe</p>
+                  <p id="breath-timer" class="text-xs text-charcoal-muted mt-0.5">4 &bull; 4 &bull; 4 rhythm</p>
+                </div>
+              </div>
+
+              <button id="breath-toggle-btn" type="button" class="mt-4 inline-flex items-center gap-2 text-xs sm:text-sm text-forest bg-ivory/85 hover:bg-ivory px-5 py-2.5 rounded-full border border-sage-soft/60 transition-colors shadow-sm">
+                <span id="breath-btn-dot" class="w-2 h-2 rounded-full bg-coral-brand"></span>
+                <span id="breath-btn-text">Try a Guided Breath</span>
+              </button>
+            </div>
+
+            <!-- Right: Visual-First Mood Explorer (Minimal Typography + Custom Illustrations) -->
+            <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
+              <p class="font-serif text-xl sm:text-2xl text-forest mb-5">What feels heaviest today?</p>
+
+              <!-- Five Single-Word Interactive Pills -->
+              <div role="tablist" aria-label="Choose a feeling to reflect on" class="flex flex-wrap justify-center lg:justify-start gap-2.5 mb-7">
+                <button type="button" role="tab" aria-selected="true" data-mood="anxiety" class="mood-pill px-4 py-2 rounded-full text-xs sm:text-sm bg-forest text-ivory transition-colors">Anxiety</button>
+                <button type="button" role="tab" aria-selected="false" data-mood="grief" class="mood-pill px-4 py-2 rounded-full text-xs sm:text-sm bg-ivory/85 text-forest hover:bg-ivory border border-sage-soft/50 transition-colors">Grief</button>
+                <button type="button" role="tab" aria-selected="false" data-mood="relationships" class="mood-pill px-4 py-2 rounded-full text-xs sm:text-sm bg-ivory/85 text-forest hover:bg-ivory border border-sage-soft/50 transition-colors">Relationships</button>
+                <button type="button" role="tab" aria-selected="false" data-mood="trauma" class="mood-pill px-4 py-2 rounded-full text-xs sm:text-sm bg-ivory/85 text-forest hover:bg-ivory border border-sage-soft/50 transition-colors">Trauma</button>
+                <button type="button" role="tab" aria-selected="false" data-mood="overwhelm" class="mood-pill px-4 py-2 rounded-full text-xs sm:text-sm bg-ivory/85 text-forest hover:bg-ivory border border-sage-soft/50 transition-colors">Overwhelm</button>
+              </div>
+
+              <!-- Dynamic Botanical Illustration + Single-Line Quiet Reflection -->
+              <div class="flex flex-col sm:flex-row items-center gap-6 w-full">
+                <div id="mood-illustration" class="mood-visual-wrap w-36 h-36 sm:w-40 sm:h-40 shrink-0 rounded-full bg-ivory/80 flex items-center justify-center p-3">
+                  <!-- Populated cleanly via JS (defaults to Anxiety horizon illustration) -->
+                </div>
+                <div class="space-y-3 max-w-sm">
+                  <p id="mood-line" class="font-serif italic text-base sm:text-lg text-forest leading-relaxed">
+                    You don’t have to carry racing thoughts alone—calm can be practiced one gentle breath at a time.
+                  </p>
+                  <a href="#contact" data-page-link="home" data-anchor="#contact" class="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.14em] text-rose-brand hover:text-forest transition-colors">
+                    <span>Talk with Dr. Barnes</span>
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Organic Wave Transition: Soft Eucalyptus -> Ivory -->
+      <div aria-hidden="true" class="w-full overflow-hidden leading-none bg-eucalyptus-soft">
+        <svg viewBox="0 0 1440 84" fill="none" preserveAspectRatio="none" class="w-full h-12 sm:h-16">
+          <path d="M0,34 C360,84 820,4 1180,46 C1320,62 1400,48 1440,36 L1440,84 L0,84 Z" fill="#F8F5EE" />
+        </svg>
+      </div>
+
+      <!-- 3. COUNSELING SERVICES PREVIEW (3 Core Services + Link to Full Services Page) -->
+      <section id="services" class="py-16 sm:py-24 bg-ivory">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8">
+
+          <div class="max-w-xl mb-16 sm:mb-20 space-y-3 reveal">
+            <p class="inline-flex items-center gap-2.5 text-xs uppercase tracking-[0.16em] text-terracotta">
+              <span class="w-6 h-[1.5px] bg-terracotta inline-block"></span>
+              <span>Counseling Services</span>
+            </p>
+            <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl text-forest leading-snug">
+              Thoughtful support shaped around your life.
+            </h2>
+          </div>
+
+          <div class="space-y-20 sm:space-y-28">
+
+            <!-- Service 1: Individual Counseling -->
+            <article class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center reveal">
+              <div class="lg:col-span-6 relative flex items-center justify-center">
+                <div class="relative w-80 h-80 sm:w-[350px] sm:h-[350px] flex items-center justify-center">
+                  <div aria-hidden="true" class="absolute inset-3 organic-pebble bg-eucalyptus/80"></div>
+                  <div aria-hidden="true" class="absolute top-6 right-5 w-24 h-24 rounded-full bg-blush-soft/75 blur-sm"></div>
+                  <svg viewBox="0 0 320 320" class="relative z-10 w-full h-full float-slow" role="img" aria-label="Editorial hand-drawn illustration of a peaceful figure breathing beneath a rising sun with blooming botanicals, representing individual counseling">
+                    <!-- Soft Sun & Breath Ripples -->
+                    <circle cx="196" cy="94" r="36" fill="#E97676" fill-opacity="0.28" />
+                    <circle cx="196" cy="94" r="52" fill="none" stroke="#C47D61" stroke-width="1.1" stroke-dasharray="3 6" />
+                    <path d="M56,244 C104,228 198,256 266,236" fill="none" stroke="#8EA38E" stroke-width="1.4" stroke-linecap="round" />
+                    <!-- Grounded Arch Frame -->
+                    <path d="M84,242 L84,146 C84,96 120,62 162,62 C204,62 236,96 236,146 L236,242" fill="#F8F5EE" fill-opacity="0.72" stroke="#223B2F" stroke-width="1.2" stroke-dasharray="4 5" />
+                    <!-- Serene Minimalist Human Silhouette in Calm Reflection -->
+                    <path d="M114,242 C116,204 126,184 146,178 C158,174 176,178 188,194 C198,208 202,226 204,242 Z" fill="#8EA38E" fill-opacity="0.38" stroke="#223B2F" stroke-width="1.5" stroke-linejoin="round" />
+                    <circle cx="156" cy="144" r="21" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.5" />
+                    <!-- Gentle Closed Eye & Peaceful Expression -->
+                    <path d="M162,143 C165,146 169,146 172,143" fill="none" stroke="#223B2F" stroke-width="1.3" stroke-linecap="round" />
+                    <!-- Flowing Hair / Calm Ribbon -->
+                    <path d="M142,130 C130,138 128,158 136,172 C142,164 146,154 146,142" fill="#223B2F" fill-opacity="0.82" />
+                    <!-- Unwinding Thought-to-Breath Ribbon -->
+                    <path d="M178,132 C194,122 204,104 196,88 C190,76 176,78 176,90 C176,102 198,106 218,92 C232,82 242,68 250,58" fill="none" stroke="#C84B75" stroke-width="1.4" stroke-linecap="round" />
+                    <!-- Blooming Botanical Stems Rising Around Figure -->
+                    <path d="M96,242 C94,200 100,162 114,124" fill="none" stroke="#223B2F" stroke-width="1.4" stroke-linecap="round" />
+                    <path d="M101,196 C78,190 70,172 80,160 C96,166 102,182 101,196 Z" fill="#8EA38E" fill-opacity="0.52" stroke="#223B2F" stroke-width="1.2" />
+                    <path d="M106,162 C126,156 134,140 124,128 C110,134 106,148 106,162 Z" fill="#E97676" fill-opacity="0.38" stroke="#223B2F" stroke-width="1.2" />
+                    <path d="M216,240 C222,204 228,174 242,144" fill="none" stroke="#223B2F" stroke-width="1.4" stroke-linecap="round" />
+                    <path d="M226,192 C248,184 256,168 244,156 C230,164 224,178 226,192 Z" fill="#C47D61" fill-opacity="0.38" stroke="#223B2F" stroke-width="1.2" />
+                    <circle cx="114" cy="118" r="6" fill="#E97676" fill-opacity="0.55" />
+                    <circle cx="244" cy="138" r="5" fill="#C84B75" fill-opacity="0.45" />
+                  </svg>
+                </div>
+              </div>
+              <div class="lg:col-span-6 space-y-4">
+                <span class="text-xs uppercase tracking-[0.16em] text-terracotta">01 &bull; One-on-One Care</span>
+                <h3 class="font-serif text-2xl sm:text-3xl text-forest">Individual Counseling</h3>
+                <p class="text-charcoal-muted leading-relaxed">
+                  A confidential space to navigate anxiety, depression, trauma, grief, or life transitions—helping you quiet overthinking and build steadier emotional rhythms.
+                </p>
+              </div>
+            </article>
+
+            <!-- Service 2: Couples Counseling -->
+            <article class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center reveal">
+              <div class="lg:col-span-6 lg:order-2 relative flex items-center justify-center">
+                <div class="relative w-80 h-80 sm:w-[350px] sm:h-[350px] flex items-center justify-center">
+                  <div aria-hidden="true" class="absolute inset-3 organic-arch bg-blush-soft/80"></div>
+                  <div aria-hidden="true" class="absolute bottom-6 left-6 w-28 h-28 rounded-full bg-eucalyptus/80 blur-sm"></div>
+                  <svg viewBox="0 0 320 320" class="relative z-10 w-full h-full float-slow" role="img" aria-label="Editorial hand-drawn illustration of two facing figures united by intertwined botanical vines and a shared blooming heart, representing couples counseling">
+                    <!-- Overlapping Relational Aura Circles -->
+                    <circle cx="122" cy="156" r="68" fill="#F8F5EE" fill-opacity="0.72" stroke="#223B2F" stroke-width="1.2" stroke-dasharray="4 5" />
+                    <circle cx="198" cy="156" r="68" fill="#E2EAE2" fill-opacity="0.62" stroke="#223B2F" stroke-width="1.2" stroke-dasharray="4 5" />
+                    <!-- Left Partner Silhouette -->
+                    <circle cx="110" cy="128" r="19" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.5" />
+                    <path d="M74,234 C76,194 90,168 112,164 C128,162 142,174 146,196 L148,234 Z" fill="#8EA38E" fill-opacity="0.45" stroke="#223B2F" stroke-width="1.5" stroke-linejoin="round" />
+                    <!-- Right Partner Silhouette -->
+                    <circle cx="210" cy="128" r="19" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.5" />
+                    <path d="M246,234 C244,194 230,168 208,164 C192,162 178,174 174,196 L172,234 Z" fill="#C47D61" fill-opacity="0.34" stroke="#223B2F" stroke-width="1.5" stroke-linejoin="round" />
+                    <!-- Shared Connection Ribbon & Blooming Heart-Leaf Center -->
+                    <path d="M126,184 C144,196 176,196 194,184" fill="none" stroke="#C84B75" stroke-width="1.6" stroke-linecap="round" />
+                    <path d="M160,234 C160,196 160,162 160,118" fill="none" stroke="#223B2F" stroke-width="1.4" stroke-linecap="round" />
+                    <path d="M160,158 C144,146 138,128 148,118 C156,124 160,138 160,158 Z" fill="#E97676" fill-opacity="0.48" stroke="#C84B75" stroke-width="1.2" />
+                    <path d="M160,158 C176,146 182,128 172,118 C164,124 160,138 160,158 Z" fill="#E97676" fill-opacity="0.48" stroke="#C84B75" stroke-width="1.2" />
+                    <path d="M160,114 C150,100 152,82 160,72 C168,82 170,100 160,114 Z" fill="#8EA38E" fill-opacity="0.55" stroke="#223B2F" stroke-width="1.2" />
+                    <!-- Listening & Empathy Arcs Above -->
+                    <path d="M124,96 C146,80 174,80 196,96" fill="none" stroke="#C47D61" stroke-width="1.3" stroke-linecap="round" />
+                    <circle cx="160" cy="60" r="5" fill="#E97676" fill-opacity="0.65" />
+                    <!-- Grounding Line -->
+                    <path d="M58,234 C118,226 202,242 262,232" fill="none" stroke="#223B2F" stroke-width="1.3" stroke-linecap="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="lg:col-span-6 lg:order-1 space-y-4">
+                <span class="text-xs uppercase tracking-[0.16em] text-rose-brand">02 &bull; Relational Healing</span>
+                <h3 class="font-serif text-2xl sm:text-3xl text-forest">Couples Counseling</h3>
+                <p class="text-charcoal-muted leading-relaxed">
+                  Guided sessions for partners seeking honest communication, restored trust, healthier boundaries, and renewed connection through every season.
+                </p>
+              </div>
+            </article>
+
+            <!-- Service 3: Family Counseling -->
+            <article class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center reveal">
+              <div class="lg:col-span-6 relative flex items-center justify-center">
+                <div class="relative w-80 h-80 sm:w-[350px] sm:h-[350px] flex items-center justify-center">
+                  <div aria-hidden="true" class="absolute inset-3 organic-leaf bg-ivory-warm"></div>
+                  <div aria-hidden="true" class="absolute top-5 left-8 w-24 h-24 rounded-full bg-eucalyptus/80 blur-sm"></div>
+                  <svg viewBox="0 0 320 320" class="relative z-10 w-full h-full float-slow" role="img" aria-label="Editorial hand-drawn illustration of a sheltering botanical canopy cradling a family of three silhouettes, representing family counseling">
+                    <!-- Warm Sunlit Canopy Background -->
+                    <circle cx="160" cy="112" r="76" fill="#E2EAE2" fill-opacity="0.72" />
+                    <circle cx="116" cy="118" r="44" fill="#8EA38E" fill-opacity="0.28" />
+                    <circle cx="206" cy="116" r="46" fill="#E97676" fill-opacity="0.2" />
+                    <!-- Sheltering Tree Trunk & Branches -->
+                    <path d="M160,248 C158,208 158,168 160,126" fill="none" stroke="#223B2F" stroke-width="2" stroke-linecap="round" />
+                    <path d="M160,162 C126,144 96,126 78,96" fill="none" stroke="#223B2F" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M160,156 C194,138 224,120 242,92" fill="none" stroke="#223B2F" stroke-width="1.5" stroke-linecap="round" />
+                    <!-- Organic Canopy Leaves -->
+                    <path d="M104,106 C86,92 84,72 100,66 C114,76 114,94 104,106 Z" fill="#8EA38E" fill-opacity="0.55" stroke="#223B2F" stroke-width="1.2" />
+                    <path d="M160,96 C146,78 148,56 160,46 C172,56 174,78 160,96 Z" fill="#E97676" fill-opacity="0.4" stroke="#223B2F" stroke-width="1.2" />
+                    <path d="M216,104 C206,90 210,70 226,66 C236,78 230,96 216,104 Z" fill="#C47D61" fill-opacity="0.42" stroke="#223B2F" stroke-width="1.2" />
+                    <!-- Three Family Silhouettes Standing Together Beneath Canopy -->
+                    <!-- Adult Left -->
+                    <circle cx="114" cy="176" r="14" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.4" />
+                    <path d="M90,244 C92,216 100,198 114,198 C128,198 136,216 138,244 Z" fill="#8EA38E" fill-opacity="0.5" stroke="#223B2F" stroke-width="1.4" />
+                    <!-- Child Center -->
+                    <circle cx="160" cy="196" r="11" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.4" />
+                    <path d="M142,244 C144,224 150,212 160,212 C170,212 176,224 178,244 Z" fill="#E97676" fill-opacity="0.42" stroke="#223B2F" stroke-width="1.4" />
+                    <!-- Adult Right -->
+                    <circle cx="206" cy="174" r="14" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.4" />
+                    <path d="M182,244 C184,214 192,196 206,196 C220,196 228,214 230,244 Z" fill="#C47D61" fill-opacity="0.38" stroke="#223B2F" stroke-width="1.4" />
+                    <!-- Rooted Ground Arcs -->
+                    <path d="M62,246 C116,236 204,236 258,246" fill="none" stroke="#223B2F" stroke-width="1.4" stroke-linecap="round" />
+                    <path d="M96,258 C134,250 186,250 224,258" fill="none" stroke="#8EA38E" stroke-width="1.2" stroke-dasharray="4 5" stroke-linecap="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="lg:col-span-6 space-y-4">
+                <span class="text-xs uppercase tracking-[0.16em] text-terracotta">03 &bull; Shared Understanding</span>
+                <h3 class="font-serif text-2xl sm:text-3xl text-forest">Family Counseling</h3>
+                <p class="text-charcoal-muted leading-relaxed">
+                  Support for parents, children, and loved ones working through behavioral concerns, separation or divorce, grief, and life transitions together.
+                </p>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Redirect Link to Full Services Page -->
+          <div class="mt-16 sm:mt-20 pt-10 border-t border-sage-soft/45 flex flex-col sm:flex-row items-center justify-between gap-6 reveal">
+            <div class="text-center sm:text-left space-y-1">
+              <p class="font-serif text-xl sm:text-2xl text-forest">Looking for Group Counseling or Telehealth?</p>
+              <p class="text-sm text-charcoal-muted">Explore every in-office and virtual counseling option offered at Holistic Healing.</p>
+            </div>
+            <a href="#services-page" data-page-link="services" class="inline-flex items-center gap-2.5 shrink-0 bg-forest text-ivory text-sm sm:text-base px-7 py-3.5 rounded-full hover:bg-forest-deep transition-colors shadow-sm">
+              <span>View All Services</span>
+              <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 10h12M11 5l5 5-5 5" />
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Organic Wave Transition: Ivory -> Deep Forest -->
+      <div aria-hidden="true" class="w-full overflow-hidden leading-none bg-ivory">
+        <svg viewBox="0 0 1440 84" fill="none" preserveAspectRatio="none" class="w-full h-12 sm:h-16">
+          <path d="M0,56 C400,4 880,82 1440,26 L1440,84 L0,84 Z" fill="#223B2F" />
+        </svg>
+      </div>
+
+      <!-- 4. TRANQUIL FOREST REFLECTION BAND -->
+      <section class="relative bg-forest text-ivory py-16 sm:py-24 overflow-hidden">
+        <div aria-hidden="true" class="pointer-events-none absolute -right-24 top-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-sage/10 blur-3xl"></div>
+        <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center space-y-6 relative z-10 reveal">
+          <svg viewBox="0 0 90 36" class="w-20 h-8 mx-auto opacity-85" aria-hidden="true">
+            <path d="M8,18 C26,18 32,6 45,6 C58,6 64,18 82,18" fill="none" stroke="#E97676" stroke-width="1.5" stroke-linecap="round" />
+            <circle cx="45" cy="24" r="3.5" fill="#E2EAE2" />
+          </svg>
+          <p class="font-serif text-2xl sm:text-3xl leading-snug text-ivory">
+            “Healing doesn’t mean erasing your story—it means finding steadier ground from which to live it.”
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <a href="#contact" data-page-link="home" data-anchor="#contact" class="inline-flex items-center gap-2 bg-ivory text-forest text-sm sm:text-base px-7 py-3.5 rounded-full hover:bg-eucalyptus transition-colors">
+              <span>Book a Free Consultation</span>
+            </a>
+            <a href="#getting-started" class="inline-flex items-center gap-2 text-sm sm:text-base text-eucalyptus hover:text-ivory px-5 py-3 rounded-full border border-eucalyptus/35 hover:border-ivory/60 transition-colors">
+              <span>See How to Get Started</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Organic Wave Transition: Deep Forest -> Ivory -->
+      <div aria-hidden="true" class="w-full overflow-hidden leading-none bg-forest">
+        <svg viewBox="0 0 1440 84" fill="none" preserveAspectRatio="none" class="w-full h-12 sm:h-16">
+          <path d="M0,26 C420,86 980,6 1440,54 L1440,84 L0,84 Z" fill="#F8F5EE" />
+        </svg>
+      </div>
+
+      <!-- 5. GETTING STARTED (Corrected Flowing Visual Journey with Custom Illustrations) -->
+      <section id="getting-started" class="relative py-16 sm:py-24 bg-ivory overflow-hidden">
+        <!-- Subtle Background Botanical Wash -->
+        <div aria-hidden="true" class="pointer-events-none absolute top-12 right-0 w-72 h-72 rounded-full bg-eucalyptus/45 blur-3xl"></div>
+
+        <div class="max-w-6xl mx-auto px-5 sm:px-8 relative z-10">
+
+          <!-- Section Header -->
+          <div class="max-w-xl mx-auto text-center mb-16 sm:mb-20 space-y-3 reveal">
+            <p class="inline-flex items-center justify-center gap-2.5 text-xs uppercase tracking-[0.16em] text-terracotta">
+              <span class="w-6 h-[1.5px] bg-terracotta inline-block"></span>
+              <span>Getting Started</span>
+              <span class="w-6 h-[1.5px] bg-terracotta inline-block"></span>
+            </p>
+            <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl text-forest leading-snug">
+              A calm, straightforward path into care.
+            </h2>
+          </div>
+
+          <!-- Properly Aligned 3-Step Visual Journey -->
+          <div class="relative reveal">
+            <!-- Accurately Anchored Connecting Path (Desktop: connects center of Step 1 -> Step 2 -> Step 3) -->
+            <svg aria-hidden="true" viewBox="0 0 900 120" preserveAspectRatio="none" class="hidden md:block absolute top-[72px] left-[16.66%] w-[66.66%] h-24 pointer-events-none z-0">
+              <path d="M 10,42 C 150,4 300,88 450,46 C 600,4 750,88 890,42" fill="none" stroke="#B9C7B7" stroke-width="1.75" stroke-dasharray="5 6" stroke-linecap="round" />
+              <circle cx="225" cy="44" r="3.5" fill="#E97676" fill-opacity="0.65" />
+              <circle cx="675" cy="44" r="3.5" fill="#8EA38E" fill-opacity="0.75" />
+            </svg>
+
+            <!-- Vertical Organic Connecting Line (Mobile Only) -->
+            <div aria-hidden="true" class="md:hidden absolute top-20 bottom-20 left-1/2 -translate-x-1/2 w-px border-l border-dashed border-sage-soft/75 pointer-events-none z-0"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-14 md:gap-10 items-start">
+
+              <!-- Step 01: Reach Out Gently -->
+              <div class="group relative z-10 flex flex-col items-center text-center">
+                <div class="relative w-40 h-40 flex items-center justify-center mb-6">
+                  <div aria-hidden="true" class="absolute inset-1 organic-pebble bg-eucalyptus/80 transition-transform duration-500 ease-out group-hover:scale-105"></div>
+                  <!-- Step Number Pill -->
+                  <span class="absolute -top-1 -right-1 z-20 w-9 h-9 rounded-full bg-ivory border border-sage-soft/60 shadow-sm flex items-center justify-center font-serif text-sm text-forest">01</span>
+                  <!-- Custom Illustration: Open Envelope with Blooming Sprout -->
+                  <svg viewBox="0 0 140 140" class="relative z-10 w-32 h-32" role="img" aria-label="Hand-drawn illustration of an open note with a blooming botanical sprig, representing reaching out gently">
+                    <circle cx="70" cy="72" r="44" fill="#F8F5EE" fill-opacity="0.75" />
+                    <!-- Botanical Sprig Rising from Note -->
+                    <path d="M70,74 C70,56 72,42 80,28" fill="none" stroke="#223B2F" stroke-width="1.4" stroke-linecap="round" />
+                    <path d="M71,54 C56,50 52,38 60,32 C70,36 72,46 71,54 Z" fill="#8EA38E" fill-opacity="0.55" stroke="#223B2F" stroke-width="1.2" />
+                    <path d="M74,46 C88,42 92,32 84,26 C76,30 73,38 74,46 Z" fill="#E97676" fill-opacity="0.45" stroke="#C84B75" stroke-width="1.2" />
+                    <!-- Soft Hand-Drawn Envelope -->
+                    <rect x="34" y="64" width="72" height="44" rx="8" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.5" />
+                    <path d="M36,68 L70,90 L104,68" fill="none" stroke="#223B2F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                    <circle cx="70" cy="90" r="4" fill="#E97676" fill-opacity="0.75" />
+                  </svg>
+                </div>
+                <span class="text-[11px] uppercase tracking-[0.16em] text-terracotta mb-1.5">Step One</span>
+                <h3 class="font-serif text-xl sm:text-2xl text-forest mb-2.5">Reach Out Gently</h3>
+                <p class="text-sm text-charcoal-muted leading-relaxed max-w-xs">
+                  Call, email, or send a brief inquiry below—no need to share personal clinical history right away.
+                </p>
+              </div>
+
+              <!-- Step 02: Free Consultation -->
+              <div class="group relative z-10 flex flex-col items-center text-center">
+                <div class="relative w-40 h-40 flex items-center justify-center mb-6">
+                  <div aria-hidden="true" class="absolute inset-1 organic-arch bg-blush-soft/85 transition-transform duration-500 ease-out group-hover:scale-105"></div>
+                  <!-- Step Number Pill -->
+                  <span class="absolute -top-1 -right-1 z-20 w-9 h-9 rounded-full bg-ivory border border-coral-brand/40 shadow-sm flex items-center justify-center font-serif text-sm text-rose-brand">02</span>
+                  <!-- Custom Illustration: Warm Conversation & Listening Ripples -->
+                  <svg viewBox="0 0 140 140" class="relative z-10 w-32 h-32" role="img" aria-label="Hand-drawn illustration of two warm teacups and shared listening arcs, representing your free consultation">
+                    <circle cx="70" cy="70" r="44" fill="#F8F5EE" fill-opacity="0.78" />
+                    <!-- Warm Connection Arc Above -->
+                    <path d="M46,52 C58,38 82,38 94,52" fill="none" stroke="#C84B75" stroke-width="1.4" stroke-dasharray="3 4" stroke-linecap="round" />
+                    <circle cx="70" cy="40" r="5" fill="#E97676" fill-opacity="0.55" />
+                    <!-- Left Cup -->
+                    <path d="M36,74 H62 V86 C62,93 56,98 49,98 C42,98 36,93 36,86 Z" fill="#8EA38E" fill-opacity="0.45" stroke="#223B2F" stroke-width="1.4" />
+                    <path d="M36,78 C29,78 28,88 36,90" fill="none" stroke="#223B2F" stroke-width="1.3" stroke-linecap="round" />
+                    <path d="M48,68 C45,62 51,58 48,53" fill="none" stroke="#223B2F" stroke-width="1.2" stroke-linecap="round" />
+                    <!-- Right Cup -->
+                    <path d="M78,74 H104 V86 C104,93 98,98 91,98 C84,98 78,93 78,86 Z" fill="#E97676" fill-opacity="0.38" stroke="#223B2F" stroke-width="1.4" />
+                    <path d="M104,78 C111,78 112,88 104,90" fill="none" stroke="#223B2F" stroke-width="1.3" stroke-linecap="round" />
+                    <path d="M91,68 C88,62 94,58 91,53" fill="none" stroke="#223B2F" stroke-width="1.2" stroke-linecap="round" />
+                    <!-- Shared Table Line -->
+                    <path d="M28,100 H112" stroke="#223B2F" stroke-width="1.4" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <span class="text-[11px] uppercase tracking-[0.16em] text-rose-brand mb-1.5">Step Two</span>
+                <h3 class="font-serif text-xl sm:text-2xl text-forest mb-2.5">Free Consultation</h3>
+                <p class="text-sm text-charcoal-muted leading-relaxed max-w-xs">
+                  Connect with Dr. Sierra Barnes to ask questions, discuss in-office or telehealth options, and sense if it feels like a good fit.
+                </p>
+              </div>
+
+              <!-- Step 03: Begin at Your Pace -->
+              <div class="group relative z-10 flex flex-col items-center text-center">
+                <div class="relative w-40 h-40 flex items-center justify-center mb-6">
+                  <div aria-hidden="true" class="absolute inset-1 organic-leaf bg-ivory-warm transition-transform duration-500 ease-out group-hover:scale-105"></div>
+                  <!-- Step Number Pill -->
+                  <span class="absolute -top-1 -right-1 z-20 w-9 h-9 rounded-full bg-ivory border border-sage-soft/60 shadow-sm flex items-center justify-center font-serif text-sm text-forest">03</span>
+                  <!-- Custom Illustration: Winding Path Toward Rising Sun & Bloom -->
+                  <svg viewBox="0 0 140 140" class="relative z-10 w-32 h-32" role="img" aria-label="Hand-drawn illustration of a winding path beneath a calm rising sun and botanical leaves, representing beginning counseling at your pace">
+                    <circle cx="70" cy="70" r="44" fill="#F8F5EE" fill-opacity="0.78" />
+                    <!-- Rising Sun -->
+                    <circle cx="88" cy="46" r="14" fill="#E97676" fill-opacity="0.35" />
+                    <circle cx="88" cy="46" r="21" fill="none" stroke="#C47D61" stroke-width="1.1" stroke-dasharray="3 4" />
+                    <!-- Winding Path -->
+                    <path d="M40,104 C56,94 46,80 68,72 C86,66 84,54 88,46" fill="none" stroke="#223B2F" stroke-width="1.6" stroke-linecap="round" />
+                    <path d="M52,104 C66,94 60,84 76,76" fill="none" stroke="#8EA38E" stroke-width="1.3" stroke-dasharray="3 4" stroke-linecap="round" />
+                    <!-- Flourishing Leaves Along Path -->
+                    <path d="M50,74 C36,70 32,58 42,52 C50,58 52,66 50,74 Z" fill="#8EA38E" fill-opacity="0.55" stroke="#223B2F" stroke-width="1.2" />
+                    <path d="M88,88 C102,84 106,72 96,68 C88,74 86,82 88,88 Z" fill="#C47D61" fill-opacity="0.4" stroke="#223B2F" stroke-width="1.2" />
+                    <path d="M30,104 H110" stroke="#223B2F" stroke-width="1.3" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <span class="text-[11px] uppercase tracking-[0.16em] text-terracotta mb-1.5">Step Three</span>
+                <h3 class="font-serif text-xl sm:text-2xl text-forest mb-2.5">Begin at Your Pace</h3>
+                <p class="text-sm text-charcoal-muted leading-relaxed max-w-xs">
+                  Start your personalized counseling rhythm in a welcoming, confidential setting designed around your goals.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Gentle Action Prompt -->
+          <div class="mt-14 text-center reveal">
+            <a href="#contact" data-page-link="home" data-anchor="#contact" class="inline-flex items-center gap-2 text-sm text-forest bg-eucalyptus/75 hover:bg-eucalyptus px-6 py-3 rounded-full transition-colors">
+              <span>Start Step 01 — Request Your Free Consultation</span>
+              <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 10h12M11 5l5 5-5 5" />
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Organic Wave Transition: Ivory -> Soft Blush -->
+      <div aria-hidden="true" class="w-full overflow-hidden leading-none bg-ivory">
+        <svg viewBox="0 0 1440 84" fill="none" preserveAspectRatio="none" class="w-full h-12 sm:h-16">
+          <path d="M0,44 C360,88 860,6 1440,50 L1440,84 L0,84 Z" fill="#F6E6EA" />
+        </svg>
+      </div>
+
+      <!-- 6. WHY CHOOSE HOLISTIC HEALING? (Between Getting Started & Common Questions) -->
+      <section id="why-choose" class="relative bg-blush-soft py-16 sm:py-24 overflow-x-clip">
+        <div aria-hidden="true" class="pointer-events-none absolute -left-20 top-20 w-72 h-72 rounded-full bg-ivory/60 blur-3xl"></div>
+
+        <div class="max-w-6xl mx-auto px-5 sm:px-8 relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-start">
+
+            <!-- Left Column: Intro Copy + Unified Editorial Botanical Illustration -->
+            <div class="lg:col-span-5 lg:sticky lg:top-28 space-y-6 reveal">
+              <p class="inline-flex items-center gap-2.5 text-xs uppercase tracking-[0.16em] text-rose-brand">
+                <span class="w-6 h-[1.5px] bg-coral-brand inline-block"></span>
+                <span>Why Choose Holistic Healing?</span>
+              </p>
+
+              <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl text-forest leading-snug">
+                We can help shift that imagination into a reality.
+              </h2>
+
+              <p class="text-sm sm:text-base text-charcoal-muted leading-relaxed">
+                Through a blend of therapeutic practices, we help you break free from the cycle of overthinking so you can find peace and live the life you truly deserve.
+              </p>
+
+              <!-- Creative Circular Editorial Image Frame with Botanical Accents & Gentle Float -->
+              <div class="pt-4 flex items-center justify-center lg:justify-start">
+                <div class="group relative w-64 h-64 sm:w-72 sm:h-72 flex items-center justify-center">
+                  <!-- Soft Organic Backdrop Halo -->
+                  <div aria-hidden="true" class="absolute inset-1 organic-pebble bg-ivory/85 shadow-sm transition-transform duration-700 ease-out group-hover:scale-105"></div>
+                  <!-- Subtle Dotted Botanical Ring -->
+                  <div aria-hidden="true" class="absolute inset-3 rounded-full border border-dashed border-coral-brand/45 float-slow"></div>
+
+                  <!-- Circular Masked Photograph with Smooth Hover Zoom -->
+                  <div class="relative z-10 w-52 h-52 sm:w-60 sm:h-60 rounded-full overflow-hidden border-4 border-ivory shadow-[0_18px_40px_rgba(34,59,47,0.12)] float-slow">
+                    <img
+                      src="https://raw.githubusercontent.com/CreativeTugsDotCom/UUF/refs/heads/main/389f8759-42d1-46a2-bb2b-3c31eb014e6d.jpg"
+                      alt="Warm editorial imagery symbolizing peace, reflection, and holistic healing"
+                      class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                      onerror="this.src='https://placehold.co/500x500/F6E6EA/223B2F?text=Holistic+Healing'"
+                    />
+                    <!-- Soft Warm Tint for Palette Harmony -->
+                    <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-forest/15 via-transparent to-coral-brand/10"></div>
+                  </div>
+
+                  <!-- Delicate Hand-Drawn Botanical Sprig Embracing the Circle -->
+                  <svg viewBox="0 0 280 280" aria-hidden="true" class="pointer-events-none absolute inset-0 z-20 w-full h-full float-slow">
+                    <!-- Bottom-Left Sage & Rose Leaf Accent -->
+                    <path d="M54,226 C38,200 32,168 38,138" fill="none" stroke="#223B2F" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M40,192 C20,186 14,170 24,160 C38,166 42,180 40,192 Z" fill="#8EA38E" fill-opacity="0.72" stroke="#223B2F" stroke-width="1.2" />
+                    <path d="M38,162 C54,156 60,142 50,134 C38,140 36,152 38,162 Z" fill="#E97676" fill-opacity="0.55" stroke="#C84B75" stroke-width="1.2" />
+                    <!-- Top-Right Sun & Petal Accent -->
+                    <circle cx="228" cy="54" r="14" fill="#E97676" fill-opacity="0.32" />
+                    <circle cx="228" cy="54" r="22" fill="none" stroke="#C47D61" stroke-width="1.1" stroke-dasharray="3 5" />
+                    <path d="M236,86 C248,76 258,82 252,94 C244,98 236,94 236,86 Z" fill="#8EA38E" fill-opacity="0.65" stroke="#223B2F" stroke-width="1.1" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: 5 Cleanly Aligned Vision Boxes with Matching Hover-Zoom Background Icons -->
+            <div class="lg:col-span-7 space-y-4 reveal">
+
+              <!-- Box 01: Rising Sun (Anxiety Relief) -->
+              <div class="group relative overflow-hidden bg-ivory/90 hover:bg-ivory p-6 sm:p-7 rounded-3xl border border-ivory transition-all duration-300 shadow-[0_8px_24px_rgba(34,59,47,0.04)] hover:shadow-[0_12px_30px_rgba(34,59,47,0.08)]">
+                <svg viewBox="0 0 120 120" aria-hidden="true" class="pointer-events-none absolute -right-3 -bottom-4 w-28 h-28 text-coral-brand/20 group-hover:text-coral-brand/35 group-hover:scale-125 group-hover:-rotate-6 transition-all duration-500 ease-out">
+                  <circle cx="60" cy="66" r="24" fill="none" stroke="currentColor" stroke-width="1.75" />
+                  <path d="M18,74 H102 M60,24 V34 M30,38 L37,45 M90,38 L83,45 M22,58 L31,61 M98,58 L89,61" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" />
+                </svg>
+                <div class="relative z-10 flex items-start gap-4 pr-10">
+                  <span class="font-serif text-lg text-rose-brand shrink-0">01</span>
+                  <p class="text-sm sm:text-base text-forest leading-relaxed">
+                    Imagine waking up each day without the heavy weight of anxiety holding you back—feeling calm, focused, and ready to take on the day.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Box 02: Protective Heart Shield (Confidential Safe Space) -->
+              <div class="group relative overflow-hidden bg-ivory/90 hover:bg-ivory p-6 sm:p-7 rounded-3xl border border-ivory transition-all duration-300 shadow-[0_8px_24px_rgba(34,59,47,0.04)] hover:shadow-[0_12px_30px_rgba(34,59,47,0.08)]">
+                <svg viewBox="0 0 120 120" aria-hidden="true" class="pointer-events-none absolute -right-3 -bottom-4 w-28 h-28 text-sage/25 group-hover:text-sage/45 group-hover:scale-125 group-hover:rotate-6 transition-all duration-500 ease-out">
+                  <path d="M60,18 L94,32 V58 C94,82 78,98 60,106 C42,98 26,82 26,58 V32 L60,18 Z" fill="none" stroke="currentColor" stroke-width="1.75" />
+                  <path d="M60,76 C56,72 44,62 44,52 C44,46 49,42 54,44 C57,45 59,48 60,50 C61,48 63,45 66,44 C71,42 76,46 76,52 C76,62 64,72 60,76 Z" fill="none" stroke="currentColor" stroke-width="1.75" />
+                </svg>
+                <div class="relative z-10 flex items-start gap-4 pr-10">
+                  <span class="font-serif text-lg text-rose-brand shrink-0">02</span>
+                  <p class="text-sm sm:text-base text-forest leading-relaxed">
+                    Imagine finally being able to share your deepest thoughts with someone in a confidential and safe space.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Box 03: Upward Blooming Path (Leaving Toxic Relationships & Depression) -->
+              <div class="group relative overflow-hidden bg-ivory/90 hover:bg-ivory p-6 sm:p-7 rounded-3xl border border-ivory transition-all duration-300 shadow-[0_8px_24px_rgba(34,59,47,0.04)] hover:shadow-[0_12px_30px_rgba(34,59,47,0.08)]">
+                <svg viewBox="0 0 120 120" aria-hidden="true" class="pointer-events-none absolute -right-3 -bottom-4 w-28 h-28 text-terracotta/25 group-hover:text-terracotta/40 group-hover:scale-125 group-hover:-rotate-6 transition-all duration-500 ease-out">
+                  <path d="M26,96 C44,82 54,66 64,46 C72,30 82,24 94,20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" />
+                  <path d="M60,56 C44,54 38,42 46,34 C56,38 60,46 60,56 Z" fill="none" stroke="currentColor" stroke-width="1.75" />
+                  <path d="M72,38 C86,36 94,46 86,56 C76,52 72,46 72,38 Z" fill="none" stroke="currentColor" stroke-width="1.75" />
+                  <circle cx="94" cy="20" r="5" fill="none" stroke="currentColor" stroke-width="1.75" />
+                </svg>
+                <div class="relative z-10 flex items-start gap-4 pr-10">
+                  <span class="font-serif text-lg text-rose-brand shrink-0">03</span>
+                  <p class="text-sm sm:text-base text-forest leading-relaxed">
+                    Imagine gaining the tools to step away from unhealthy or toxic relationships and ease the weight of depression.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Box 04: Remembrance Lotus (Processing Loss & Grief) -->
+              <div class="group relative overflow-hidden bg-ivory/90 hover:bg-ivory p-6 sm:p-7 rounded-3xl border border-ivory transition-all duration-300 shadow-[0_8px_24px_rgba(34,59,47,0.04)] hover:shadow-[0_12px_30px_rgba(34,59,47,0.08)]">
+                <svg viewBox="0 0 120 120" aria-hidden="true" class="pointer-events-none absolute -right-3 -bottom-4 w-28 h-28 text-rose-brand/20 group-hover:text-rose-brand/35 group-hover:scale-125 group-hover:rotate-6 transition-all duration-500 ease-out">
+                  <path d="M60,84 C46,68 48,44 60,30 C72,44 74,68 60,84 Z" fill="none" stroke="currentColor" stroke-width="1.75" />
+                  <path d="M60,84 C36,78 24,58 28,42 C44,48 54,64 60,84 Z" fill="none" stroke="currentColor" stroke-width="1.75" />
+                  <path d="M60,84 C84,78 96,58 92,42 C76,48 66,64 60,84 Z" fill="none" stroke="currentColor" stroke-width="1.75" />
+                  <path d="M26,92 C48,86 72,86 94,92" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" />
+                </svg>
+                <div class="relative z-10 flex items-start gap-4 pr-10">
+                  <span class="font-serif text-lg text-rose-brand shrink-0">04</span>
+                  <p class="text-sm sm:text-base text-forest leading-relaxed">
+                    Imagine waking up tomorrow with steady strategies to honor and process the loss of a loved one.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Box 05: Grounded Balance Waves (Managing Emotions) -->
+              <div class="group relative overflow-hidden bg-ivory/90 hover:bg-ivory p-6 sm:p-7 rounded-3xl border border-ivory transition-all duration-300 shadow-[0_8px_24px_rgba(34,59,47,0.04)] hover:shadow-[0_12px_30px_rgba(34,59,47,0.08)]">
+                <svg viewBox="0 0 120 120" aria-hidden="true" class="pointer-events-none absolute -right-3 -bottom-4 w-28 h-28 text-forest/15 group-hover:text-forest/30 group-hover:scale-125 group-hover:-rotate-6 transition-all duration-500 ease-out">
+                  <circle cx="60" cy="54" r="24" fill="none" stroke="currentColor" stroke-width="1.75" />
+                  <path d="M60,22 V86 M28,54 H92" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 4" />
+                  <path d="M22,90 C38,80 54,98 72,88 C84,82 94,86 102,90" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" />
+                </svg>
+                <div class="relative z-10 flex items-start gap-4 pr-10">
+                  <span class="font-serif text-lg text-rose-brand shrink-0">05</span>
+                  <p class="text-sm sm:text-base text-forest leading-relaxed">
+                    Imagine finally feeling able to navigate and manage your emotions in a healthier, grounded way.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Organic Wave Transition: Soft Blush -> Ivory -->
+      <div aria-hidden="true" class="w-full overflow-hidden leading-none bg-blush-soft">
+        <svg viewBox="0 0 1440 84" fill="none" preserveAspectRatio="none" class="w-full h-12 sm:h-16">
+          <path d="M0,30 C440,86 960,8 1440,48 L1440,84 L0,84 Z" fill="#F8F5EE" />
+        </svg>
+      </div>
+
+      <!-- 7. COMMON QUESTIONS (FAQs) -->
+      <section id="faqs" class="py-16 sm:py-24 bg-ivory">
+        <div class="max-w-4xl mx-auto px-5 sm:px-8">
+          <div class="mb-12 space-y-3 reveal">
+            <p class="inline-flex items-center gap-2.5 text-xs uppercase tracking-[0.16em] text-terracotta">
+              <span class="w-6 h-[1.5px] bg-terracotta inline-block"></span>
+              <span>Common Questions</span>
+            </p>
+            <h2 class="font-serif text-2xl sm:text-3xl text-forest">
+              Gentle answers before you take the first step.
+            </h2>
+          </div>
+
+          <div class="divide-y divide-sage-soft/50 reveal">
+            <!-- FAQ 1 -->
+            <div class="faq-item py-5" data-open="false">
+              <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left py-1" aria-expanded="false">
+                <span class="font-serif text-lg text-forest">How do I schedule my free consultation?</span>
+                <span class="faq-icon shrink-0 w-7 h-7 rounded-full bg-eucalyptus text-forest flex items-center justify-center transition-transform duration-300">+</span>
+              </button>
+              <div class="faq-content">
+                <p class="pt-3 pr-8 text-sm sm:text-base text-charcoal-muted leading-relaxed">
+                  You can call <a href="tel:8039005619" class="text-forest underline decoration-coral-brand/60 underline-offset-2">803-900-5619</a>, email <a href="mailto:counseling.holistic.healing@gmail.com" class="text-forest underline decoration-coral-brand/60 underline-offset-2">counseling.holistic.healing@gmail.com</a>, or use the brief inquiry form below to request your complimentary initial consultation.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item py-5" data-open="false">
+              <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left py-1" aria-expanded="false">
+                <span class="font-serif text-lg text-forest">Are both in-office and telehealth sessions available?</span>
+                <span class="faq-icon shrink-0 w-7 h-7 rounded-full bg-eucalyptus text-forest flex items-center justify-center transition-transform duration-300">+</span>
+              </button>
+              <div class="faq-content">
+                <p class="pt-3 pr-8 text-sm sm:text-base text-charcoal-muted leading-relaxed">
+                  Yes. Holistic Healing: Counseling &amp; Consulting, LLC provides both in-office and virtual telehealth counseling options. Dr. Sierra Barnes is licensed to serve clients in both South Carolina and Texas.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item py-5" data-open="false">
+              <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left py-1" aria-expanded="false">
+                <span class="font-serif text-lg text-forest">How do insurance and payment work?</span>
+                <span class="faq-icon shrink-0 w-7 h-7 rounded-full bg-eucalyptus text-forest flex items-center justify-center transition-transform duration-300">+</span>
+              </button>
+              <div class="faq-content">
+                <p class="pt-3 pr-8 text-sm sm:text-base text-charcoal-muted leading-relaxed">
+                  Current session fees, accepted insurance options, and payment details are reviewed directly with you during your free consultation so everything is transparent before your first appointment.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item py-5" data-open="false">
+              <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left py-1" aria-expanded="false">
+                <span class="font-serif text-lg text-forest">What can I expect during my first session?</span>
+                <span class="faq-icon shrink-0 w-7 h-7 rounded-full bg-eucalyptus text-forest flex items-center justify-center transition-transform duration-300">+</span>
+              </button>
+              <div class="faq-content">
+                <p class="pt-3 pr-8 text-sm sm:text-base text-charcoal-muted leading-relaxed">
+                  Your first session is a collaborative, unhurried conversation focused on understanding your story, what brought you to counseling, and the goals you would like to work toward together—always at a pace that feels safe for you.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Organic Wave Transition: Ivory -> Soft Eucalyptus -->
+      <div aria-hidden="true" class="w-full overflow-hidden leading-none bg-ivory">
+        <svg viewBox="0 0 1440 84" fill="none" preserveAspectRatio="none" class="w-full h-12 sm:h-16">
+          <path d="M0,50 C380,6 920,86 1440,34 L1440,84 L0,84 Z" fill="#E2EAE2" />
+        </svg>
+      </div>
+
+      <!-- 8. CONTACT SECTION (Privacy-Conscious Inquiry) -->
+      <section id="contact" class="py-16 sm:py-24 bg-eucalyptus">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start reveal">
+
+            <!-- Left Column: Verified Contact Details -->
+            <div class="lg:col-span-5 space-y-6">
+              <p class="inline-flex items-center gap-2.5 text-xs uppercase tracking-[0.16em] text-rose-brand">
+                <span class="w-6 h-[1.5px] bg-coral-brand inline-block"></span>
+                <span>Get in Touch</span>
+              </p>
+              <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl text-forest leading-snug">
+                Ready when you are. Let’s schedule your free consultation.
+              </h2>
+              <p class="text-sm sm:text-base text-charcoal-muted leading-relaxed">
+                Reach out by phone, email, or the simple inquiry form. Dr. Barnes’s practice welcomes clients across South Carolina and Texas for in-office and telehealth sessions.
+              </p>
+
+              <div class="space-y-4 pt-2 text-sm sm:text-base">
+                <div class="flex items-start gap-3.5">
+                  <span class="w-9 h-9 rounded-full bg-ivory/85 flex items-center justify-center text-forest shrink-0">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p class="text-xs uppercase tracking-[0.12em] text-charcoal-muted">Phone</p>
+                    <a href="tel:8039005619" class="text-forest hover:text-rose-brand transition-colors">803-900-5619</a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3.5">
+                  <span class="w-9 h-9 rounded-full bg-ivory/85 flex items-center justify-center text-forest shrink-0">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect x="2" y="4" width="20" height="16" rx="2" />
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                  </span>
+                  <div class="break-all">
+                    <p class="text-xs uppercase tracking-[0.12em] text-charcoal-muted">Email</p>
+                    <a href="mailto:counseling.holistic.healing@gmail.com" class="text-forest hover:text-rose-brand transition-colors">counseling.holistic.healing@gmail.com</a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3.5">
+                  <span class="w-9 h-9 rounded-full bg-ivory/85 flex items-center justify-center text-forest shrink-0">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p class="text-xs uppercase tracking-[0.12em] text-charcoal-muted">Service Areas</p>
+                    <p class="text-forest">In-Office &amp; Telehealth &bull; Licensed in SC &amp; TX</p>
+                    <p class="text-xs text-charcoal-muted mt-0.5">Exact in-office location details are shared upon scheduling.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Privacy-Conscious Inquiry Form -->
+            <div class="lg:col-span-7 bg-ivory/92 p-7 sm:p-10 organic-pill-a shadow-[0_18px_40px_rgba(34,59,47,0.06)]">
+              <form id="consultation-form" class="space-y-5" novalidate>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="client-name" class="block text-xs uppercase tracking-[0.12em] text-charcoal-muted mb-2">Your Name *</label>
+                    <input id="client-name" name="name" type="text" required autocomplete="name" placeholder="First and last name" class="w-full px-4 py-3 rounded-2xl bg-ivory-warm/70 border border-sage-soft/50 text-sm text-forest placeholder:text-charcoal-muted/60 focus:bg-ivory transition-colors" />
+                  </div>
+                  <div>
+                    <label for="client-email" class="block text-xs uppercase tracking-[0.12em] text-charcoal-muted mb-2">Email Address *</label>
+                    <input id="client-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com" class="w-full px-4 py-3 rounded-2xl bg-ivory-warm/70 border border-sage-soft/50 text-sm text-forest placeholder:text-charcoal-muted/60 focus:bg-ivory transition-colors" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="client-phone" class="block text-xs uppercase tracking-[0.12em] text-charcoal-muted mb-2">Phone Number</label>
+                    <input id="client-phone" name="phone" type="tel" autocomplete="tel" placeholder="(Optional)" class="w-full px-4 py-3 rounded-2xl bg-ivory-warm/70 border border-sage-soft/50 text-sm text-forest placeholder:text-charcoal-muted/60 focus:bg-ivory transition-colors" />
+                  </div>
+                  <div>
+                    <label for="client-service" class="block text-xs uppercase tracking-[0.12em] text-charcoal-muted mb-2">Area of Interest</label>
+                    <select id="client-service" name="service" class="w-full px-4 py-3 rounded-2xl bg-ivory-warm/70 border border-sage-soft/50 text-sm text-forest focus:bg-ivory transition-colors">
+                      <option value="Individual Counseling">Individual Counseling</option>
+                      <option value="Couples Counseling">Couples Counseling</option>
+                      <option value="Family Counseling">Family Counseling</option>
+                      <option value="Group Counseling">Group Counseling</option>
+                      <option value="Telehealth Counseling">Telehealth (Virtual) Counseling</option>
+                      <option value="LPC-A Supervision / Consulting">LPC-A Supervision / Consulting</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="client-note" class="block text-xs uppercase tracking-[0.12em] text-charcoal-muted mb-2">Scheduling Preference</label>
+                  <textarea id="client-note" name="note" rows="3" placeholder="Share preferred days, times, or whether you prefer in-office or telehealth." class="w-full px-4 py-3 rounded-2xl bg-ivory-warm/70 border border-sage-soft/50 text-sm text-forest placeholder:text-charcoal-muted/60 focus:bg-ivory transition-colors"></textarea>
+                  <p class="mt-2 text-xs text-charcoal-muted">
+                    For your privacy, please avoid sharing sensitive medical or mental health details in this general contact form.
+                  </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-1">
+                  <button type="submit" class="inline-flex items-center justify-center gap-2 bg-forest text-ivory text-sm sm:text-base px-7 py-3.5 rounded-full hover:bg-forest-deep transition-colors shadow-sm">
+                    <span>Request Free Consultation</span>
+                  </button>
+                  <span class="text-xs text-charcoal-muted">Or call <a href="tel:8039005619" class="text-forest underline">803-900-5619</a> directly</span>
+                </div>
+
+                <!-- Inline Accessible Confirmation / Validation Message -->
+                <div id="form-feedback" role="status" aria-live="polite" class="hidden rounded-2xl px-4 py-3 text-sm"></div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- =========================================================
+         PAGE 2: ABOUT DR. SIERRA BARNES (Dedicated Navigable View)
+         ========================================================= -->
+    <div id="page-about" class="page-view relative pt-28 pb-24 bg-ivory overflow-hidden">
+      <!-- Soft Ambient Blush & Eucalyptus Washes -->
+      <div aria-hidden="true" class="pointer-events-none absolute -top-16 -right-24 w-[380px] h-[380px] sm:w-[500px] sm:h-[500px] rounded-full bg-blush-soft/80 blur-3xl"></div>
+      <div aria-hidden="true" class="pointer-events-none absolute top-[460px] -left-24 w-[340px] h-[340px] rounded-full bg-eucalyptus/65 blur-3xl"></div>
+
+      <div class="max-w-6xl mx-auto px-5 sm:px-8 relative z-10">
+
+        <!-- Back to Home -->
+        <div class="mb-10">
+          <a href="#home" data-page-link="home" class="inline-flex items-center gap-2 text-sm text-charcoal-muted hover:text-rose-brand transition-colors">
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 10H4M9 5l-5 5 5 5" />
+            </svg>
+            <span>Back to Home</span>
+          </a>
+        </div>
+
+        <!-- Asymmetrical Therapist Introduction -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+          <!-- Creative Circular Editorial Portrait Frame for Dr. Sierra Barnes -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="group relative w-72 h-72 sm:w-80 sm:h-80 flex items-center justify-center">
+              <!-- Soft Warm Blush & Eucalyptus Organic Backdrop Halo -->
+              <div aria-hidden="true" class="absolute inset-1 organic-arch bg-gradient-to-br from-blush-soft via-ivory-warm/75 to-eucalyptus/85 shadow-sm transition-transform duration-700 ease-out group-hover:scale-105"></div>
+              <!-- Subtle Dotted Coral-Rose Botanical Ring -->
+              <div aria-hidden="true" class="absolute inset-3 rounded-full border border-dashed border-rose-brand/45 float-slow"></div>
+
+              <!-- Circular Masked Portrait with Smooth Hover Zoom -->
+              <div class="relative z-10 w-60 h-60 sm:w-[17rem] sm:h-[17rem] rounded-full overflow-hidden border-4 border-ivory shadow-[0_18px_40px_rgba(200,75,117,0.12)] float-slow">
+                <img
+                  src="https://raw.githubusercontent.com/CreativeTugsDotCom/UUF/refs/heads/main/b0b3328f-00bd-49fe-bc84-b2302682a1bb.jpg"
+                  alt="Professional portrait of Dr. Sierra Barnes, Ph.D., LPC, LPC-S"
+                  class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-110"
+                  onerror="this.src='https://placehold.co/500x500/F6E6EA/223B2F?text=Dr.+Sierra+Barnes'"
+                />
+                <!-- Soft Warm Coral-Forest Tint for Palette Harmony -->
+                <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-forest/15 via-transparent to-coral-brand/15"></div>
+              </div>
+
+              <!-- Delicate Hand-Drawn Botanical Sprig Embracing the Circle -->
+              <svg viewBox="0 0 280 280" aria-hidden="true" class="pointer-events-none absolute inset-0 z-20 w-full h-full float-slow">
+                <!-- Bottom-Left Sage & Warm Rose Leaf Accent -->
+                <path d="M54,226 C38,200 32,168 38,138" fill="none" stroke="#223B2F" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M40,192 C20,186 14,170 24,160 C38,166 42,180 40,192 Z" fill="#8EA38E" fill-opacity="0.72" stroke="#223B2F" stroke-width="1.2" />
+                <path d="M38,162 C54,156 60,142 50,134 C38,140 36,152 38,162 Z" fill="#E97676" fill-opacity="0.65" stroke="#C84B75" stroke-width="1.2" />
+                <!-- Top-Right Coral Sun & Rose Petal Accent -->
+                <circle cx="228" cy="54" r="14" fill="#E97676" fill-opacity="0.4" />
+                <circle cx="228" cy="54" r="22" fill="none" stroke="#C84B75" stroke-width="1.1" stroke-dasharray="3 5" />
+                <path d="M236,86 C248,76 258,82 252,94 C244,98 236,94 236,86 Z" fill="#E97676" fill-opacity="0.55" stroke="#C84B75" stroke-width="1.1" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Verified Credentials & Philosophy -->
+          <div class="lg:col-span-7 space-y-6">
+            <p class="inline-flex items-center gap-2.5 text-xs uppercase tracking-[0.16em] text-rose-brand">
+              <span class="w-6 h-[1.5px] bg-coral-brand inline-block"></span>
+              <span>Meet Your Therapist</span>
+            </p>
+            <h1 class="font-serif text-3xl sm:text-4xl text-forest leading-snug">
+              Dr. Sierra Barnes, Ph.D., M.Ed., LPC, LPC-S
+            </h1>
+            <div class="inline-flex flex-wrap items-center gap-2 px-4 py-1.5 rounded-full bg-blush-soft/85 border border-coral-brand/30 text-xs uppercase tracking-[0.12em] text-rose-brand">
+              <span>Licensed Professional Counselor &amp; Supervisor</span>
+              <span aria-hidden="true" class="text-coral-brand">&bull;</span>
+              <span>SC &amp; TX</span>
+            </div>
+            <p class="text-base text-charcoal-muted leading-relaxed">
+              Dr. Sierra Barnes founded Holistic Healing: Counseling &amp; Consulting, LLC on a simple, deeply held conviction: true healing considers the whole person, not just their parts. Through compassionate collaboration and evidence-based care, she supports individuals, couples, families, and groups in moving from survival toward grounded peace.
+            </p>
+
+            <!-- Verified Education List with Warm Coral-Rose Accents -->
+            <div class="pt-3 pl-5 border-l-2 border-coral-brand/55 space-y-2.5">
+              <h2 class="font-serif text-lg text-forest">Education &amp; Credentials</h2>
+              <ul class="space-y-2.5 text-sm text-charcoal-muted">
+                <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-coral-brand ring-4 ring-blush-soft shrink-0"></span><span>Ph.D., Counselor Education &amp; Supervision</span></li>
+                <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-rose-brand ring-4 ring-blush-soft shrink-0"></span><span>M.Ed., School Counseling (K–12)</span></li>
+                <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-coral-brand ring-4 ring-blush-soft shrink-0"></span><span>B.A., English</span></li>
+                <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-rose-brand ring-4 ring-blush-soft shrink-0"></span><span>LPC &amp; LPC-S — Licensed in South Carolina &amp; Texas</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Verified Specialty Areas (All 15 Areas — Blended Blush & Eucalyptus Wash) -->
+        <div class="relative overflow-hidden bg-gradient-to-br from-blush-soft/80 via-ivory-warm/70 to-eucalyptus-soft p-8 sm:p-12 organic-pill-b border border-coral-brand/20 mb-16">
+          <!-- Subtle Coral-Rose Botanical Watermark -->
+          <svg viewBox="0 0 180 180" aria-hidden="true" class="pointer-events-none absolute -right-6 -bottom-6 w-44 h-44 text-rose-brand/10">
+            <path d="M90,156 C90,114 94,76 116,38" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M94,114 C64,104 54,82 68,68 C86,78 94,96 94,114 Z" fill="currentColor" />
+            <path d="M102,84 C130,74 140,54 126,40 C108,50 100,68 102,84 Z" fill="currentColor" />
+          </svg>
+
+          <div class="relative z-10 max-w-2xl mb-8 space-y-2">
+            <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-rose-brand">
+              <span class="w-5 h-[1.5px] bg-coral-brand inline-block"></span>
+              <span>Clinical Focus</span>
+            </span>
+            <h2 class="font-serif text-2xl sm:text-3xl text-forest">Specialty Areas</h2>
+            <p class="text-sm text-charcoal-muted">
+              Areas of care supported by Dr. Sierra Barnes across individual, relational, and family counseling.
+            </p>
+          </div>
+          <div class="relative z-10 flex flex-wrap gap-2.5">
+            <span class="px-4 py-2 rounded-full bg-ivory/95 border border-coral-brand/25 hover:border-rose-brand/50 hover:bg-blush-soft/60 text-sm text-forest transition-colors">PTSD / Trauma</span>
+            <span class="px-4 py-2 rounded-full bg-ivory/95 border border-coral-brand/25 hover:border-rose-brand/50 hover:bg-blush-soft/60 text-sm text-forest transition-colors">Anxiety</span>
+            <span class="px-4 py-2 rounded-full bg-ivory/95 border border-coral-brand/25 hover:border-rose-brand/50 hover:bg-blush-soft/60 text-sm text-forest transition-colors">Depression</span>
+            <span class="px-4 py-2 rounded-full bg-ivory/95 border border-coral-brand/25 hover:border-rose-brand/50 hover:bg-blush-soft/60 text-sm text-forest transition-colors">Loss / Grief</span>
+            <span class="px-4 py-2 rounded-full bg-ivory/95 border border-coral-brand/25 hover:border-rose-brand/50 hover:bg-blush-soft/60 text-sm text-forest transition-colors">Relational Issues</span>
+            <span class="px-4 py-2 rounded-full bg-ivory/95 border border-coral-brand/25 hover:border-rose-brand/50 hover:bg-blush-soft/60 text-sm text-forest transition-colors">Stress Management</span>
+            <span class="px-4 py-2 rounded-full bg-ivory/95 border border-coral-brand/25 hover:border-rose-brand/50 hover:bg-blush-soft/60 text-sm text-forest transition-colors">Parenting Issues</span>
+            <span class="px-4 py-2 rounded-full bg-ivory/95 border border-coral-brand/25 hover:border-rose-brand/50 hover:bg-blush-soft/60 text-sm text-forest transition-colors">Child Behavioral Issues</span>
+            <span class="px-4 py-2 rounded-full bg-ivory/95 border border-coral-brand/25 hover:border-rose-brand/50 hover:bg-blush-soft/60 text-sm text-forest transition-colors">Self-Esteem</span>
+            <span class="px-4 py-2 rounded-full bg-ivory/95 border border-coral-brand/25 hover:border-rose-brand/50 hover:bg-blush-soft/60 text-sm text-forest transition-colors">Recidivism</span>
+            <span class="px-4 py-2 rounded-full bg-ivory/95 border border-coral-brand/25 hover:border-rose-brand/50 hover:bg-blush-soft/60 text-sm text-forest transition-colors">School &amp; Career</span>
+            <span class="px-4 py-2 rounded-full bg-ivory/95 border border-coral-brand/25 hover:border-rose-brand/50 hover:bg-blush-soft/60 text-sm text-forest transition-colors">Addictions</span>
+            <span class="px-4 py-2 rounded-full bg-ivory/95 border border-coral-brand/25 hover:border-rose-brand/50 hover:bg-blush-soft/60 text-sm text-forest transition-colors">Adjustment / Life Transitions</span>
+            <span class="px-4 py-2 rounded-full bg-ivory/95 border border-coral-brand/25 hover:border-rose-brand/50 hover:bg-blush-soft/60 text-sm text-forest transition-colors">Anger Management</span>
+            <span class="px-4 py-2 rounded-full bg-ivory/95 border border-coral-brand/25 hover:border-rose-brand/50 hover:bg-blush-soft/60 text-sm text-forest transition-colors">Separation / Divorce</span>
+          </div>
+        </div>
+
+        <!-- Consultation CTA with Warm Rose-Coral Accent -->
+        <div class="relative bg-blush-soft/65 p-8 sm:p-11 organic-pill-a text-center space-y-4 border border-coral-brand/20">
+          <svg viewBox="0 0 90 28" class="w-20 h-7 mx-auto" aria-hidden="true">
+            <path d="M8,16 C26,16 32,4 45,4 C58,4 64,16 82,16" fill="none" stroke="#E97676" stroke-width="1.5" stroke-linecap="round" />
+            <circle cx="45" cy="21" r="3" fill="#C84B75" />
+          </svg>
+          <h2 class="font-serif text-2xl sm:text-3xl text-forest">Would you like to connect with Dr. Barnes?</h2>
+          <p class="text-sm text-charcoal-muted max-w-md mx-auto">
+            Begin with a complimentary consultation to ask questions and explore in-office or telehealth care at your own pace.
+          </p>
+          <div class="pt-1">
+            <a href="#contact" data-page-link="home" data-anchor="#contact" class="inline-flex items-center gap-2 bg-forest text-ivory text-sm sm:text-base px-7 py-3.5 rounded-full hover:bg-rose-brand transition-colors shadow-sm">
+              <span>Book a Free Consultation</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- =========================================================
+         PAGE 2B: ALL COUNSELING SERVICES (Dedicated Navigable View)
+         ========================================================= -->
+    <div id="page-services" class="page-view pt-28 pb-24 bg-ivory">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+
+        <!-- Back to Home -->
+        <div class="mb-10">
+          <a href="#home" data-page-link="home" class="inline-flex items-center gap-2 text-sm text-charcoal-muted hover:text-forest transition-colors">
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 10H4M9 5l-5 5 5 5" />
+            </svg>
+            <span>Back to Home</span>
+          </a>
+        </div>
+
+        <!-- Services Page Header -->
+        <div class="max-w-2xl mb-16 sm:mb-20 space-y-4">
+          <p class="inline-flex items-center gap-2.5 text-xs uppercase tracking-[0.16em] text-rose-brand">
+            <span class="w-6 h-[1.5px] bg-coral-brand inline-block"></span>
+            <span>All Counseling Services</span>
+          </p>
+          <h1 class="font-serif text-3xl sm:text-4xl text-forest leading-snug">
+            In-office and telehealth care tailored to your season of life.
+          </h1>
+          <p class="text-sm sm:text-base text-charcoal-muted leading-relaxed">
+            Whether you are seeking individual support, relational healing, family guidance, group encouragement, or virtual sessions from home, each service is grounded in whole-person care.
+          </p>
+        </div>
+
+        <!-- Complete Catalog of All 5 Verified Counseling Services -->
+        <div class="space-y-20 sm:space-y-28">
+
+          <!-- 01: Individual Counseling -->
+          <article class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-6 relative flex items-center justify-center">
+              <div class="relative w-80 h-80 sm:w-[350px] sm:h-[350px] flex items-center justify-center">
+                <div aria-hidden="true" class="absolute inset-3 organic-pebble bg-eucalyptus/80"></div>
+                <div aria-hidden="true" class="absolute top-6 right-5 w-24 h-24 rounded-full bg-blush-soft/75 blur-sm"></div>
+                <svg viewBox="0 0 320 320" class="relative z-10 w-full h-full float-slow" role="img" aria-label="Editorial hand-drawn illustration of a peaceful figure breathing beneath a rising sun with blooming botanicals, representing individual counseling">
+                  <circle cx="196" cy="94" r="36" fill="#E97676" fill-opacity="0.28" />
+                  <circle cx="196" cy="94" r="52" fill="none" stroke="#C47D61" stroke-width="1.1" stroke-dasharray="3 6" />
+                  <path d="M56,244 C104,228 198,256 266,236" fill="none" stroke="#8EA38E" stroke-width="1.4" stroke-linecap="round" />
+                  <path d="M84,242 L84,146 C84,96 120,62 162,62 C204,62 236,96 236,146 L236,242" fill="#F8F5EE" fill-opacity="0.72" stroke="#223B2F" stroke-width="1.2" stroke-dasharray="4 5" />
+                  <path d="M114,242 C116,204 126,184 146,178 C158,174 176,178 188,194 C198,208 202,226 204,242 Z" fill="#8EA38E" fill-opacity="0.38" stroke="#223B2F" stroke-width="1.5" stroke-linejoin="round" />
+                  <circle cx="156" cy="144" r="21" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.5" />
+                  <path d="M162,143 C165,146 169,146 172,143" fill="none" stroke="#223B2F" stroke-width="1.3" stroke-linecap="round" />
+                  <path d="M142,130 C130,138 128,158 136,172 C142,164 146,154 146,142" fill="#223B2F" fill-opacity="0.82" />
+                  <path d="M178,132 C194,122 204,104 196,88 C190,76 176,78 176,90 C176,102 198,106 218,92 C232,82 242,68 250,58" fill="none" stroke="#C84B75" stroke-width="1.4" stroke-linecap="round" />
+                  <path d="M96,242 C94,200 100,162 114,124" fill="none" stroke="#223B2F" stroke-width="1.4" stroke-linecap="round" />
+                  <path d="M101,196 C78,190 70,172 80,160 C96,166 102,182 101,196 Z" fill="#8EA38E" fill-opacity="0.52" stroke="#223B2F" stroke-width="1.2" />
+                  <path d="M106,162 C126,156 134,140 124,128 C110,134 106,148 106,162 Z" fill="#E97676" fill-opacity="0.38" stroke="#223B2F" stroke-width="1.2" />
+                  <path d="M216,240 C222,204 228,174 242,144" fill="none" stroke="#223B2F" stroke-width="1.4" stroke-linecap="round" />
+                  <path d="M226,192 C248,184 256,168 244,156 C230,164 224,178 226,192 Z" fill="#C47D61" fill-opacity="0.38" stroke="#223B2F" stroke-width="1.2" />
+                  <circle cx="114" cy="118" r="6" fill="#E97676" fill-opacity="0.55" />
+                  <circle cx="244" cy="138" r="5" fill="#C84B75" fill-opacity="0.45" />
+                </svg>
+              </div>
+            </div>
+            <div class="lg:col-span-6 space-y-4">
+              <span class="text-xs uppercase tracking-[0.16em] text-terracotta">01 &bull; One-on-One Care</span>
+              <h2 class="font-serif text-2xl sm:text-3xl text-forest">Individual Counseling</h2>
+              <p class="text-charcoal-muted leading-relaxed">
+                A confidential, non-judgmental space to work through anxiety, depression, trauma, grief, stress, self-esteem, or major life transitions—building practical emotional tools at your own pace.
+              </p>
+              <p class="text-xs uppercase tracking-[0.12em] text-forest/80">In-Office &amp; Telehealth &bull; SC &amp; TX</p>
+            </div>
+          </article>
+
+          <!-- 02: Couples Counseling -->
+          <article class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-6 lg:order-2 relative flex items-center justify-center">
+              <div class="relative w-80 h-80 sm:w-[350px] sm:h-[350px] flex items-center justify-center">
+                <div aria-hidden="true" class="absolute inset-3 organic-arch bg-blush-soft/80"></div>
+                <div aria-hidden="true" class="absolute bottom-6 left-6 w-28 h-28 rounded-full bg-eucalyptus/80 blur-sm"></div>
+                <svg viewBox="0 0 320 320" class="relative z-10 w-full h-full float-slow" role="img" aria-label="Editorial hand-drawn illustration of two facing figures united by intertwined botanical vines and a shared blooming heart, representing couples counseling">
+                  <circle cx="122" cy="156" r="68" fill="#F8F5EE" fill-opacity="0.72" stroke="#223B2F" stroke-width="1.2" stroke-dasharray="4 5" />
+                  <circle cx="198" cy="156" r="68" fill="#E2EAE2" fill-opacity="0.62" stroke="#223B2F" stroke-width="1.2" stroke-dasharray="4 5" />
+                  <circle cx="110" cy="128" r="19" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.5" />
+                  <path d="M74,234 C76,194 90,168 112,164 C128,162 142,174 146,196 L148,234 Z" fill="#8EA38E" fill-opacity="0.45" stroke="#223B2F" stroke-width="1.5" stroke-linejoin="round" />
+                  <circle cx="210" cy="128" r="19" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.5" />
+                  <path d="M246,234 C244,194 230,168 208,164 C192,162 178,174 174,196 L172,234 Z" fill="#C47D61" fill-opacity="0.34" stroke="#223B2F" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M126,184 C144,196 176,196 194,184" fill="none" stroke="#C84B75" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M160,234 C160,196 160,162 160,118" fill="none" stroke="#223B2F" stroke-width="1.4" stroke-linecap="round" />
+                  <path d="M160,158 C144,146 138,128 148,118 C156,124 160,138 160,158 Z" fill="#E97676" fill-opacity="0.48" stroke="#C84B75" stroke-width="1.2" />
+                  <path d="M160,158 C176,146 182,128 172,118 C164,124 160,138 160,158 Z" fill="#E97676" fill-opacity="0.48" stroke="#C84B75" stroke-width="1.2" />
+                  <path d="M160,114 C150,100 152,82 160,72 C168,82 170,100 160,114 Z" fill="#8EA38E" fill-opacity="0.55" stroke="#223B2F" stroke-width="1.2" />
+                  <path d="M124,96 C146,80 174,80 196,96" fill="none" stroke="#C47D61" stroke-width="1.3" stroke-linecap="round" />
+                  <circle cx="160" cy="60" r="5" fill="#E97676" fill-opacity="0.65" />
+                  <path d="M58,234 C118,226 202,242 262,232" fill="none" stroke="#223B2F" stroke-width="1.3" stroke-linecap="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="lg:col-span-6 lg:order-1 space-y-4">
+              <span class="text-xs uppercase tracking-[0.16em] text-rose-brand">02 &bull; Relational Healing</span>
+              <h2 class="font-serif text-2xl sm:text-3xl text-forest">Couples Counseling</h2>
+              <p class="text-charcoal-muted leading-relaxed">
+                Dedicated support for partners seeking healthier communication, renewed trust, clearer boundaries, and steady navigation through relational strain or life changes.
+              </p>
+              <p class="text-xs uppercase tracking-[0.12em] text-forest/80">In-Office &amp; Telehealth &bull; SC &amp; TX</p>
+            </div>
+          </article>
+
+          <!-- 03: Family Counseling -->
+          <article class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-6 relative flex items-center justify-center">
+              <div class="relative w-80 h-80 sm:w-[350px] sm:h-[350px] flex items-center justify-center">
+                <div aria-hidden="true" class="absolute inset-3 organic-leaf bg-ivory-warm"></div>
+                <div aria-hidden="true" class="absolute top-5 left-8 w-24 h-24 rounded-full bg-eucalyptus/80 blur-sm"></div>
+                <svg viewBox="0 0 320 320" class="relative z-10 w-full h-full float-slow" role="img" aria-label="Editorial hand-drawn illustration of a sheltering botanical canopy cradling a family of three silhouettes, representing family counseling">
+                  <circle cx="160" cy="112" r="76" fill="#E2EAE2" fill-opacity="0.72" />
+                  <circle cx="116" cy="118" r="44" fill="#8EA38E" fill-opacity="0.28" />
+                  <circle cx="206" cy="116" r="46" fill="#E97676" fill-opacity="0.2" />
+                  <path d="M160,248 C158,208 158,168 160,126" fill="none" stroke="#223B2F" stroke-width="2" stroke-linecap="round" />
+                  <path d="M160,162 C126,144 96,126 78,96" fill="none" stroke="#223B2F" stroke-width="1.5" stroke-linecap="round" />
+                  <path d="M160,156 C194,138 224,120 242,92" fill="none" stroke="#223B2F" stroke-width="1.5" stroke-linecap="round" />
+                  <path d="M104,106 C86,92 84,72 100,66 C114,76 114,94 104,106 Z" fill="#8EA38E" fill-opacity="0.55" stroke="#223B2F" stroke-width="1.2" />
+                  <path d="M160,96 C146,78 148,56 160,46 C172,56 174,78 160,96 Z" fill="#E97676" fill-opacity="0.4" stroke="#223B2F" stroke-width="1.2" />
+                  <path d="M216,104 C206,90 210,70 226,66 C236,78 230,96 216,104 Z" fill="#C47D61" fill-opacity="0.42" stroke="#223B2F" stroke-width="1.2" />
+                  <circle cx="114" cy="176" r="14" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.4" />
+                  <path d="M90,244 C92,216 100,198 114,198 C128,198 136,216 138,244 Z" fill="#8EA38E" fill-opacity="0.5" stroke="#223B2F" stroke-width="1.4" />
+                  <circle cx="160" cy="196" r="11" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.4" />
+                  <path d="M142,244 C144,224 150,212 160,212 C170,212 176,224 178,244 Z" fill="#E97676" fill-opacity="0.42" stroke="#223B2F" stroke-width="1.4" />
+                  <circle cx="206" cy="174" r="14" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.4" />
+                  <path d="M182,244 C184,214 192,196 206,196 C220,196 228,214 230,244 Z" fill="#C47D61" fill-opacity="0.38" stroke="#223B2F" stroke-width="1.4" />
+                  <path d="M62,246 C116,236 204,236 258,246" fill="none" stroke="#223B2F" stroke-width="1.4" stroke-linecap="round" />
+                  <path d="M96,258 C134,250 186,250 224,258" fill="none" stroke="#8EA38E" stroke-width="1.2" stroke-dasharray="4 5" stroke-linecap="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="lg:col-span-6 space-y-4">
+              <span class="text-xs uppercase tracking-[0.16em] text-terracotta">03 &bull; Shared Understanding</span>
+              <h2 class="font-serif text-2xl sm:text-3xl text-forest">Family Counseling</h2>
+              <p class="text-charcoal-muted leading-relaxed">
+                Collaborative sessions designed for parents, children, and loved ones navigating parenting challenges, child behavioral concerns, separation or divorce, grief, and household transitions.
+              </p>
+              <p class="text-xs uppercase tracking-[0.12em] text-forest/80">In-Office &amp; Telehealth &bull; SC &amp; TX</p>
+            </div>
+          </article>
+
+          <!-- 04: Group Counseling -->
+          <article class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-6 lg:order-2 relative flex items-center justify-center">
+              <div class="relative w-80 h-80 sm:w-[350px] sm:h-[350px] flex items-center justify-center">
+                <div aria-hidden="true" class="absolute inset-3 organic-pebble bg-eucalyptus/75"></div>
+                <div aria-hidden="true" class="absolute top-6 left-8 w-24 h-24 rounded-full bg-blush-soft/75 blur-sm"></div>
+                <svg viewBox="0 0 320 320" class="relative z-10 w-full h-full float-slow" role="img" aria-label="Editorial hand-drawn illustration of a circle of figures gathered around a shared glowing lotus bloom, representing group counseling">
+                  <!-- Shared Circle & Warmth Ripples -->
+                  <circle cx="160" cy="160" r="96" fill="none" stroke="#8EA38E" stroke-width="1.3" stroke-dasharray="4 6" />
+                  <circle cx="160" cy="160" r="64" fill="#F8F5EE" fill-opacity="0.82" stroke="#223B2F" stroke-width="1.2" />
+                  <circle cx="160" cy="160" r="34" fill="#E97676" fill-opacity="0.24" />
+                  <!-- Central Lotus of Shared Support -->
+                  <path d="M160,180 C148,166 150,146 160,134 C170,146 172,166 160,180 Z" fill="#E97676" fill-opacity="0.48" stroke="#223B2F" stroke-width="1.2" />
+                  <path d="M160,180 C140,174 132,160 136,148 C148,154 156,166 160,180 Z" fill="#8EA38E" fill-opacity="0.52" stroke="#223B2F" stroke-width="1.2" />
+                  <path d="M160,180 C180,174 188,160 184,148 C172,154 164,166 160,180 Z" fill="#8EA38E" fill-opacity="0.52" stroke="#223B2F" stroke-width="1.2" />
+                  <!-- Four Gathered Silhouettes Around the Circle -->
+                  <!-- Top Figure -->
+                  <circle cx="160" cy="68" r="13" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.4" />
+                  <path d="M138,100 C142,88 150,84 160,84 C170,84 178,88 182,100" fill="#8EA38E" fill-opacity="0.48" stroke="#223B2F" stroke-width="1.4" stroke-linecap="round" />
+                  <!-- Bottom Figure -->
+                  <circle cx="160" cy="244" r="13" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.4" />
+                  <path d="M138,274 C142,262 150,258 160,258 C170,258 178,262 182,274" fill="#C47D61" fill-opacity="0.4" stroke="#223B2F" stroke-width="1.4" stroke-linecap="round" />
+                  <!-- Left Figure -->
+                  <circle cx="70" cy="152" r="13" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.4" />
+                  <path d="M50,188 C54,174 62,168 72,168 C82,168 88,174 92,188" fill="#E97676" fill-opacity="0.38" stroke="#223B2F" stroke-width="1.4" stroke-linecap="round" />
+                  <!-- Right Figure -->
+                  <circle cx="250" cy="152" r="13" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.4" />
+                  <path d="M228,188 C232,174 238,168 248,168 C258,168 266,174 270,188" fill="#8EA38E" fill-opacity="0.48" stroke="#223B2F" stroke-width="1.4" stroke-linecap="round" />
+                  <!-- Connecting Botanical Leaves at Diagonals -->
+                  <path d="M98,98 C86,88 88,74 100,72 C108,82 106,92 98,98 Z" fill="#C84B75" fill-opacity="0.35" stroke="#223B2F" stroke-width="1.1" />
+                  <path d="M222,98 C234,88 232,74 220,72 C212,82 214,92 222,98 Z" fill="#8EA38E" fill-opacity="0.5" stroke="#223B2F" stroke-width="1.1" />
+                  <path d="M98,222 C86,232 88,246 100,248 C108,238 106,228 98,222 Z" fill="#8EA38E" fill-opacity="0.5" stroke="#223B2F" stroke-width="1.1" />
+                  <path d="M222,222 C234,232 232,246 220,248 C212,238 214,228 222,222 Z" fill="#E97676" fill-opacity="0.4" stroke="#223B2F" stroke-width="1.1" />
+                </svg>
+              </div>
+            </div>
+            <div class="lg:col-span-6 lg:order-1 space-y-4">
+              <span class="text-xs uppercase tracking-[0.16em] text-rose-brand">04 &bull; Community &amp; Belonging</span>
+              <h2 class="font-serif text-2xl sm:text-3xl text-forest">Group Counseling</h2>
+              <p class="text-charcoal-muted leading-relaxed">
+                A guided, small-group environment where shared stories foster encouragement, fresh perspective, accountability, and emotional resilience alongside peers on similar journeys.
+              </p>
+              <p class="text-xs uppercase tracking-[0.12em] text-forest/80">In-Office &amp; Virtual Cohorts &bull; Ask for Upcoming Dates</p>
+            </div>
+          </article>
+
+          <!-- 05: Telehealth (Virtual) Counseling -->
+          <article class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-6 relative flex items-center justify-center">
+              <div class="relative w-80 h-80 sm:w-[350px] sm:h-[350px] flex items-center justify-center">
+                <div aria-hidden="true" class="absolute inset-3 organic-arch bg-blush-soft/70"></div>
+                <div aria-hidden="true" class="absolute bottom-6 right-8 w-24 h-24 rounded-full bg-eucalyptus/80 blur-sm"></div>
+                <svg viewBox="0 0 320 320" class="relative z-10 w-full h-full float-slow" role="img" aria-label="Editorial hand-drawn illustration of an arched sunlit window overlooking calm hills with a warm teacup and botanical sprig, representing telehealth counseling from home">
+                  <!-- Sunlit Arched Window -->
+                  <path d="M84,230 L84,132 C84,88 118,54 160,54 C202,54 236,88 236,132 L236,230 Z" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.6" />
+                  <!-- Warm Sun & Soft Sky Ripples Outside -->
+                  <circle cx="186" cy="116" r="24" fill="#E97676" fill-opacity="0.36" />
+                  <path d="M116,118 C134,106 154,106 172,118" fill="none" stroke="#C84B75" stroke-width="1.2" stroke-dasharray="3 4" stroke-linecap="round" />
+                  <path d="M106,104 C132,88 164,88 190,104" fill="none" stroke="#C47D61" stroke-width="1.1" stroke-dasharray="3 5" stroke-linecap="round" />
+                  <!-- Rolling Calm Sage Hills Through Window -->
+                  <path d="M85,186 C118,162 156,192 192,172 C210,162 224,168 235,176 L235,229 L85,229 Z" fill="#8EA38E" fill-opacity="0.45" />
+                  <path d="M85,204 C128,186 186,210 235,192 L235,229 L85,229 Z" fill="#223B2F" fill-opacity="0.16" />
+                  <!-- Windowsill -->
+                  <path d="M62,230 H258" stroke="#223B2F" stroke-width="1.8" stroke-linecap="round" />
+                  <!-- Cozy Steaming Teacup on Sill -->
+                  <path d="M114,202 H152 V216 C152,224 144,230 133,230 C122,230 114,224 114,216 Z" fill="#C47D61" fill-opacity="0.45" stroke="#223B2F" stroke-width="1.4" />
+                  <path d="M152,206 C160,206 162,218 152,220" fill="none" stroke="#223B2F" stroke-width="1.4" stroke-linecap="round" />
+                  <path d="M128,194 C124,186 132,182 128,174" fill="none" stroke="#223B2F" stroke-width="1.2" stroke-linecap="round" />
+                  <path d="M139,194 C135,186 143,182 139,174" fill="none" stroke="#223B2F" stroke-width="1.2" stroke-linecap="round" />
+                  <!-- Potted Botanical Sprig on Sill -->
+                  <path d="M188,208 H216 L212,230 H192 Z" fill="#E2EAE2" stroke="#223B2F" stroke-width="1.4" stroke-linejoin="round" />
+                  <path d="M202,208 C202,190 206,176 216,162" fill="none" stroke="#223B2F" stroke-width="1.3" stroke-linecap="round" />
+                  <path d="M204,192 C190,186 188,174 196,168 C204,174 206,184 204,192 Z" fill="#8EA38E" fill-opacity="0.6" stroke="#223B2F" stroke-width="1.1" />
+                  <path d="M208,180 C222,174 226,164 218,158 C210,164 208,172 208,180 Z" fill="#E97676" fill-opacity="0.45" stroke="#223B2F" stroke-width="1.1" />
+                </svg>
+              </div>
+            </div>
+            <div class="lg:col-span-6 space-y-4">
+              <span class="text-xs uppercase tracking-[0.16em] text-terracotta">05 &bull; From Your Own Space</span>
+              <h2 class="font-serif text-2xl sm:text-3xl text-forest">Telehealth (Virtual) Counseling</h2>
+              <p class="text-charcoal-muted leading-relaxed">
+                Accessible virtual counseling from the comfort and privacy of your own space—offering the same warmth, depth, and clinical care for clients located anywhere in South Carolina or Texas.
+              </p>
+              <p class="text-xs uppercase tracking-[0.12em] text-forest/80">Virtual Sessions &bull; Licensed in SC &amp; TX</p>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Gentle Consultation CTA Banner -->
+        <div class="mt-20 bg-eucalyptus/70 p-8 sm:p-12 organic-pill-a flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-2 text-center md:text-left">
+            <h2 class="font-serif text-2xl sm:text-3xl text-forest">Unsure which service fits best?</h2>
+            <p class="text-sm sm:text-base text-charcoal-muted max-w-xl">
+              Schedule a complimentary consultation with Dr. Sierra Barnes to talk through your goals and find the right format together.
+            </p>
+          </div>
+          <a href="#contact" data-page-link="home" data-anchor="#contact" class="inline-flex items-center gap-2 shrink-0 bg-forest text-ivory text-sm sm:text-base px-7 py-3.5 rounded-full hover:bg-forest-deep transition-colors">
+            <span>Book a Free Consultation</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- =========================================================
+         PAGE 3: OUR THERAPEUTIC APPROACH (Dedicated Interactive View)
+         ========================================================= -->
+    <div id="page-approach" class="page-view relative pt-28 pb-24 bg-ivory overflow-hidden">
+      <!-- Soft Ambient Blush & Eucalyptus Washes -->
+      <div aria-hidden="true" class="pointer-events-none absolute -top-16 -right-24 w-[380px] h-[380px] sm:w-[500px] sm:h-[500px] rounded-full bg-blush-soft/80 blur-3xl"></div>
+      <div aria-hidden="true" class="pointer-events-none absolute top-[520px] -left-24 w-[340px] h-[340px] rounded-full bg-eucalyptus/65 blur-3xl"></div>
+
+      <div class="max-w-6xl mx-auto px-5 sm:px-8 relative z-10">
+
+        <!-- Back to Home -->
+        <div class="mb-10">
+          <a href="#home" data-page-link="home" class="inline-flex items-center gap-2 text-sm text-charcoal-muted hover:text-rose-brand transition-colors">
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 10H4M9 5l-5 5 5 5" />
+            </svg>
+            <span>Back to Home</span>
+          </a>
+        </div>
+
+        <!-- Asymmetrical Editorial Header with Botanical Accent -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-14">
+          <div class="lg:col-span-8 space-y-4">
+            <p class="inline-flex items-center gap-2.5 text-xs uppercase tracking-[0.16em] text-rose-brand">
+              <span class="w-6 h-[1.5px] bg-coral-brand inline-block"></span>
+              <span>Our Therapeutic Approach</span>
+            </p>
+            <h1 class="font-serif text-3xl sm:text-4xl text-forest leading-snug">
+              Evidence-based modalities, translated into everyday peace.
+            </h1>
+            <p class="text-sm sm:text-base text-charcoal-muted leading-relaxed max-w-2xl">
+              Select any approach below to see how Dr. Barnes blends proven clinical practices with intentional mindfulness in a collaborative, unhurried setting.
+            </p>
+          </div>
+          <div class="hidden lg:flex lg:col-span-4 justify-end">
+            <div class="relative w-44 h-44 flex items-center justify-center">
+              <div aria-hidden="true" class="absolute inset-2 organic-pebble bg-gradient-to-br from-blush-soft via-ivory-warm to-eucalyptus/80"></div>
+              <svg viewBox="0 0 160 160" class="relative z-10 w-36 h-36 float-slow" aria-hidden="true">
+                <circle cx="80" cy="80" r="56" fill="none" stroke="#E97676" stroke-width="1.1" stroke-dasharray="3 6" />
+                <path d="M80,126 C80,96 82,66 94,36" fill="none" stroke="#223B2F" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M82,92 C58,86 50,70 62,58 C76,66 82,78 82,92 Z" fill="#8EA38E" fill-opacity="0.55" stroke="#223B2F" stroke-width="1.2" />
+                <path d="M86,70 C108,64 116,48 104,38 C90,46 84,58 86,70 Z" fill="#E97676" fill-opacity="0.5" stroke="#C84B75" stroke-width="1.2" />
+                <circle cx="96" cy="30" r="6" fill="#C84B75" fill-opacity="0.45" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Modality Explorer (Blended Rose, Coral & Eucalyptus Palette) -->
+        <div class="relative overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center bg-gradient-to-br from-blush-soft/80 via-ivory-warm/70 to-eucalyptus-soft p-6 sm:p-11 organic-pill-b border border-coral-brand/20 mb-16">
+          <!-- Modality Selector Pills -->
+          <div class="lg:col-span-5 space-y-2.5 relative z-10" role="tablist" aria-label="Therapeutic modalities">
+            <button type="button" role="tab" aria-selected="true" data-modality="cbt" class="modality-btn w-full flex items-center justify-between gap-3 text-left px-5 py-3.5 rounded-full text-sm bg-forest text-ivory shadow-sm transition-all">
+              <span>Cognitive Behavioral Therapy (CBT)</span>
+              <span class="modality-dot w-2 h-2 rounded-full bg-coral-brand shrink-0"></span>
+            </button>
+            <button type="button" role="tab" aria-selected="false" data-modality="tfcbt" class="modality-btn w-full flex items-center justify-between gap-3 text-left px-5 py-3.5 rounded-full text-sm bg-ivory/90 text-forest border border-coral-brand/20 hover:border-rose-brand/45 hover:bg-blush-soft/50 transition-all">
+              <span>Trauma-Focused CBT (TF-CBT)</span>
+              <span class="modality-dot w-2 h-2 rounded-full bg-coral-brand/35 shrink-0"></span>
+            </button>
+            <button type="button" role="tab" aria-selected="false" data-modality="act" class="modality-btn w-full flex items-center justify-between gap-3 text-left px-5 py-3.5 rounded-full text-sm bg-ivory/90 text-forest border border-coral-brand/20 hover:border-rose-brand/45 hover:bg-blush-soft/50 transition-all">
+              <span>Acceptance &amp; Commitment Therapy (ACT)</span>
+              <span class="modality-dot w-2 h-2 rounded-full bg-coral-brand/35 shrink-0"></span>
+            </button>
+            <button type="button" role="tab" aria-selected="false" data-modality="dbt" class="modality-btn w-full flex items-center justify-between gap-3 text-left px-5 py-3.5 rounded-full text-sm bg-ivory/90 text-forest border border-coral-brand/20 hover:border-rose-brand/45 hover:bg-blush-soft/50 transition-all">
+              <span>Dialectical Behavioral Therapy (DBT)</span>
+              <span class="modality-dot w-2 h-2 rounded-full bg-coral-brand/35 shrink-0"></span>
+            </button>
+            <button type="button" role="tab" aria-selected="false" data-modality="sfbt" class="modality-btn w-full flex items-center justify-between gap-3 text-left px-5 py-3.5 rounded-full text-sm bg-ivory/90 text-forest border border-coral-brand/20 hover:border-rose-brand/45 hover:bg-blush-soft/50 transition-all">
+              <span>Solution-Focused Therapy</span>
+              <span class="modality-dot w-2 h-2 rounded-full bg-coral-brand/35 shrink-0"></span>
+            </button>
+            <button type="button" role="tab" aria-selected="false" data-modality="exposure" class="modality-btn w-full flex items-center justify-between gap-3 text-left px-5 py-3.5 rounded-full text-sm bg-ivory/90 text-forest border border-coral-brand/20 hover:border-rose-brand/45 hover:bg-blush-soft/50 transition-all">
+              <span>Exposure Therapy</span>
+              <span class="modality-dot w-2 h-2 rounded-full bg-coral-brand/35 shrink-0"></span>
+            </button>
+            <button type="button" role="tab" aria-selected="false" data-modality="mindfulness" class="modality-btn w-full flex items-center justify-between gap-3 text-left px-5 py-3.5 rounded-full text-sm bg-ivory/90 text-forest border border-coral-brand/20 hover:border-rose-brand/45 hover:bg-blush-soft/50 transition-all">
+              <span>Intentional Mindfulness</span>
+              <span class="modality-dot w-2 h-2 rounded-full bg-coral-brand/35 shrink-0"></span>
+            </button>
+          </div>
+
+          <!-- Active Modality Visual & Plain-Language Explanation -->
+          <div class="lg:col-span-7 relative z-10 flex flex-col sm:flex-row items-center gap-8 bg-ivory/95 p-7 sm:p-10 organic-pill-a border border-coral-brand/20 shadow-[0_14px_34px_rgba(34,59,47,0.05)]">
+            <div class="relative w-44 h-44 shrink-0 flex items-center justify-center">
+              <div aria-hidden="true" class="absolute inset-0 rounded-full bg-gradient-to-br from-blush-soft/85 via-ivory to-eucalyptus/75"></div>
+              <div aria-hidden="true" class="absolute inset-2 rounded-full border border-dashed border-coral-brand/45"></div>
+              <div id="modality-visual" class="relative z-10 w-36 h-36 flex items-center justify-center transition-opacity duration-300">
+                <!-- Populated via JS -->
+              </div>
+            </div>
+            <div class="space-y-3 text-center sm:text-left">
+              <span id="modality-tag" class="inline-block text-xs uppercase tracking-[0.14em] text-rose-brand">Thoughts &bull; Feelings &bull; Actions</span>
+              <h2 id="modality-title" class="font-serif text-2xl sm:text-[1.6rem] text-forest leading-snug">Cognitive Behavioral Therapy (CBT)</h2>
+              <p id="modality-desc" class="text-sm sm:text-base text-charcoal-muted leading-relaxed">
+                Helps you gently notice unhelpful thought loops and reshape them into steadier, more compassionate perspectives that support calmer daily choices.
+              </p>
+              <div class="pt-1">
+                <span id="modality-focus" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blush-soft/75 border border-coral-brand/25 text-xs text-rose-brand">
+                  In session: noticing &amp; reframing everyday patterns
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dr. Barnes's Verified Quote (Warm Editorial Framing) -->
+        <div class="relative max-w-4xl mx-auto mb-16 px-6 sm:px-12 py-10 bg-ivory-warm/70 organic-pill-a border border-coral-brand/20 text-center space-y-5">
+          <svg viewBox="0 0 90 28" class="w-20 h-7 mx-auto" aria-hidden="true">
+            <path d="M8,16 C26,16 32,4 45,4 C58,4 64,16 82,16" fill="none" stroke="#E97676" stroke-width="1.5" stroke-linecap="round" />
+            <circle cx="45" cy="21" r="3" fill="#C84B75" />
+          </svg>
+          <blockquote class="space-y-4">
+            <p class="font-serif italic text-lg sm:text-xl text-forest leading-relaxed">
+              “My therapy styles are Cognitive Behavioral Therapy (CBT), Solution-Focused Therapy, Acceptance and Commitment Therapy (ACT), Exposure Therapy, and Dialectical Behavioral Therapy (DBT) with an intentional focus on mindfulness activities in our collaborative approach. Trauma-Focused CBT is another modality that I love to use to help clients exposed to adverse childhood experiences (ACES).”
+            </p>
+            <footer class="text-xs uppercase tracking-[0.16em] text-rose-brand">&mdash; Dr. Sierra Barnes, Ph.D., LPC, LPC-S</footer>
+          </blockquote>
+        </div>
+
+        <!-- Cohesive Consultation CTA Band -->
+        <div class="relative bg-blush-soft/70 p-8 sm:p-11 organic-pill-b border border-coral-brand/20 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-2 text-center md:text-left">
+            <p class="text-xs uppercase tracking-[0.16em] text-rose-brand">Collaborative &amp; Personalized</p>
+            <h2 class="font-serif text-2xl sm:text-3xl text-forest">Curious which approach fits your goals?</h2>
+            <p class="text-sm sm:text-base text-charcoal-muted max-w-xl">
+              You never have to choose a modality on your own. During your complimentary consultation, Dr. Barnes will listen to your story and shape a gentle path forward together.
+            </p>
+          </div>
+          <a href="#contact" data-page-link="home" data-anchor="#contact" class="inline-flex items-center gap-2 shrink-0 bg-forest text-ivory text-sm sm:text-base px-7 py-3.5 rounded-full hover:bg-rose-brand transition-colors shadow-sm">
+            <span>Book a Free Consultation</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- =========================================================
+         PAGE 4: EVENTS & RESOURCES (Upcoming Events, Reviews & Crisis Directory)
+         ========================================================= -->
+    <div id="page-community" class="page-view pt-28 pb-24 bg-ivory">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+
+        <!-- Back to Home -->
+        <div class="mb-10">
+          <a href="#home" data-page-link="home" class="inline-flex items-center gap-2 text-sm text-charcoal-muted hover:text-forest transition-colors">
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 10H4M9 5l-5 5 5 5" />
+            </svg>
+            <span>Back to Home</span>
+          </a>
+        </div>
+
+        <!-- Upcoming Events ("What's Happening / You're Invited!") -->
+        <section class="mb-20">
+          <div class="max-w-2xl mb-10 space-y-3">
+            <p class="inline-flex items-center gap-2.5 text-xs uppercase tracking-[0.16em] text-rose-brand">
+              <span class="w-6 h-[1.5px] bg-coral-brand inline-block"></span>
+              <span>What’s Happening</span>
+            </p>
+            <h1 class="font-serif text-3xl sm:text-4xl text-forest">You’re Invited: Upcoming Events &amp; Gatherings</h1>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-eucalyptus-soft p-8 organic-pill-a space-y-3">
+              <span class="inline-block text-xs uppercase tracking-[0.14em] text-terracotta">Clinical Supervision</span>
+              <h2 class="font-serif text-2xl text-forest">LPC-A Virtual Group Supervision</h2>
+              <p class="text-sm text-charcoal-muted leading-relaxed">
+                Led by Dr. Sierra Barnes, LPC-S. Connect with fellow associate counselors in a supportive virtual supervision space focused on clinical growth and ethical practice.
+              </p>
+              <a href="#contact" data-page-link="home" data-anchor="#contact" class="inline-flex items-center gap-1.5 pt-2 text-sm text-forest hover:text-rose-brand transition-colors">
+                <span>Inquire for upcoming dates</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+
+            <div class="bg-blush-soft/75 p-8 organic-pill-b space-y-3">
+              <span class="inline-block text-xs uppercase tracking-[0.14em] text-rose-brand">Community &amp; Group Care</span>
+              <h2 class="font-serif text-2xl text-forest">Seasonal Group Counseling &amp; Workshops</h2>
+              <p class="text-sm text-charcoal-muted leading-relaxed">
+                Small-group sessions and mindfulness workshops centered on anxiety relief, grief support, and emotional regulation. Reach out to join the invitation list for our next cohort.
+              </p>
+              <a href="#contact" data-page-link="home" data-anchor="#contact" class="inline-flex items-center gap-1.5 pt-2 text-sm text-forest hover:text-rose-brand transition-colors">
+                <span>Request an invitation</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Client Reviews -->
+        <section class="mb-20 bg-ivory-warm p-8 sm:p-12 organic-pill-b text-center space-y-4">
+          <div class="text-coral-brand text-xl tracking-[0.2em]" aria-label="Five out of five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <h2 class="font-serif text-2xl sm:text-3xl text-forest">Client Reflections &amp; Reviews</h2>
+          <p class="text-sm sm:text-base text-charcoal-muted max-w-xl mx-auto leading-relaxed">
+            Client privacy always comes first. Verified reviews of Dr. Sierra Barnes’s practice are shared externally on trusted counseling directories and Google Reviews.
+          </p>
+          <div class="pt-2">
+            <a href="#contact" data-page-link="home" data-anchor="#contact" class="inline-flex items-center gap-2 bg-forest text-ivory text-sm px-6 py-3 rounded-full hover:bg-forest-deep transition-colors">
+              <span>Ask About Client Experiences &amp; Consultation</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- Complete Crisis & Community Support Directory -->
+        <section id="crisis-resources" class="space-y-8">
+          <div class="max-w-2xl space-y-2">
+            <p class="inline-flex items-center gap-2.5 text-xs uppercase tracking-[0.16em] text-rose-brand">
+              <span class="w-6 h-[1.5px] bg-coral-brand inline-block"></span>
+              <span>Immediate Support</span>
+            </p>
+            <h2 class="font-serif text-2xl sm:text-3xl text-forest">Crisis &amp; Community Support Directory</h2>
+            <p class="text-sm text-charcoal-muted">
+              If you or someone you love is experiencing a mental health emergency, please reach out to one of the immediate 24/7 resources below.
+            </p>
+          </div>
+
+          <!-- Primary Emergency & Essential Lines -->
+          <div class="bg-forest text-ivory p-7 sm:p-9 organic-pill-a grid grid-cols-1 md:grid-cols-2 gap-5 text-sm">
+            <div>
+              <p class="font-serif text-lg text-coral-brand mb-2">Emergency &amp; Immediate Crisis</p>
+              <ul class="space-y-2 text-eucalyptus/90">
+                <li><strong>Emergency:</strong> Dial 911 or go to your nearest emergency room</li>
+                <li><strong>988 Suicide &amp; Crisis Lifeline:</strong> Call or Text <strong>988</strong> (or 1-800-273-TALK / 8255)</li>
+                <li><strong>Crisis Text Line:</strong> Text <strong>"HOME"</strong> to 741-741</li>
+                <li><strong>National Hopeline Network:</strong> 1-800-SUICIDE (1-800-784-2433)</li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-serif text-lg text-coral-brand mb-2">Additional Urgent &amp; Local Support</p>
+              <ul class="space-y-2 text-eucalyptus/90">
+                <li><strong>Self-Harm Hotline:</strong> 1-800-DONT CUT (1-800-366-8288)</li>
+                <li><strong>Essential Local &amp; Community Services:</strong> Dial <strong>211</strong> (211.org)</li>
+                <li><strong>Veterans Crisis Line:</strong> Dial 988 then press 1 (veteranscrisisline.net)</li>
+                <li><strong>Lifeline Online Chat:</strong> 988lifeline.org</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Additional Specialized Support Hotlines -->
+          <div class="bg-eucalyptus-soft p-7 sm:p-9 organic-pill-b">
+            <h3 class="font-serif text-xl text-forest mb-5">Additional Specialized Support Hotlines</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-charcoal-muted">
+              <p><strong class="text-forest font-medium">National Domestic Violence Hotline:</strong> 1-800-799-7233</p>
+              <p><strong class="text-forest font-medium">National Council on Alcoholism &amp; Drug Dependency:</strong> 1-800-622-2255</p>
+              <p><strong class="text-forest font-medium">National Crisis Line (Anorexia &amp; Bulimia):</strong> 1-800-233-4357</p>
+              <p><strong class="text-forest font-medium">TREVOR Crisis Hotline (LGBTQ+ Youth):</strong> 1-866-488-7386</p>
+              <p><strong class="text-forest font-medium">TransLifeline:</strong> 1-877-565-8860 (translifeline.org)</p>
+              <p><strong class="text-forest font-medium">LGBTQ+ Help Center:</strong> 1-888-843-4564</p>
+              <p><strong class="text-forest font-medium">Planned Parenthood Hotline:</strong> 1-800-230-PLAN (7526)</p>
+              <p><strong class="text-forest font-medium">AIDS Crisis Line:</strong> 1-800-221-7044</p>
+              <p><strong class="text-forest font-medium">American Assoc. of Poison Control Centers:</strong> 1-800-222-1222</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Organic Wave Transition into Integrated Footer -->
+  <div aria-hidden="true" class="w-full overflow-hidden leading-none bg-ivory" id="footer-wave-wrap">
+    <svg viewBox="0 0 1440 84" fill="none" preserveAspectRatio="none" class="w-full h-12 sm:h-16">
+      <path d="M0,46 C420,2 960,84 1440,32 L1440,84 L0,84 Z" fill="#182B22" />
+    </svg>
+  </div>
+
+  <!-- =========================================================
+       INTEGRATED EDITORIAL FOOTER
+       ========================================================= -->
+  <footer class="bg-forest-deep text-ivory pt-10 pb-14">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b border-eucalyptus/15">
+
+        <!-- Brand Column with Official Background-Free Emblem -->
+        <div class="md:col-span-5 space-y-4">
+          <a href="#home" data-page-link="home" class="inline-flex items-center gap-3">
+            <svg viewBox="0 0 180 120" class="w-11 h-8 shrink-0" role="img" aria-label="Holistic Healing Counseling official emblem">
+              <path d="M90 83 C86 79 60 54 60 32 C60 18 71 10 81 13 C86 15 89 19 90 23 C91 19 94 15 99 13 C109 10 120 18 120 32 C120 54 94 79 90 83 Z" fill="#E97676" />
+              <path d="M87 112 C88 100 86 87 77 77 C69 68 57 62 46 57 C43 56 42 60 45 63 C52 69 60 74 60 82 C60 90 50 94 38 90 C28 86 19 77 12 69 C9 66 5 69 8 73 C14 82 22 94 31 99 C48 105 68 108 87 112 Z" fill="#C84B75" />
+              <path d="M35 84 C27 76 20 65 18 52 C26 57 33 68 35 84 Z" fill="#C84B75" />
+              <path d="M40 82 C34 73 30 62 30 51 C38 57 42 68 40 82 Z" fill="#C84B75" />
+              <path d="M45 84 C43 74 42 64 46 55 C51 63 51 74 45 84 Z" fill="#C84B75" />
+              <path d="M93 112 C92 100 94 87 103 77 C111 68 123 62 134 57 C137 56 138 60 135 63 C128 69 120 74 120 82 C120 90 130 94 142 90 C152 86 161 77 168 69 C171 66 175 69 172 73 C166 82 158 94 149 99 C132 105 112 108 93 112 Z" fill="#C84B75" />
+              <path d="M145 84 C153 76 160 65 162 52 C154 57 147 68 145 84 Z" fill="#C84B75" />
+              <path d="M140 82 C146 73 150 62 150 51 C142 57 138 68 140 82 Z" fill="#C84B75" />
+              <path d="M135 84 C137 74 138 64 134 55 C129 63 129 74 135 84 Z" fill="#C84B75" />
+            </svg>
+            <div class="leading-tight">
+              <span class="block font-serif text-lg text-ivory">Holistic Healing</span>
+              <span class="block text-[10px] uppercase tracking-[0.14em] text-eucalyptus/75">Counseling &amp; Consulting, LLC</span>
+            </div>
+          </a>
+          <p class="text-sm text-eucalyptus/80 leading-relaxed max-w-sm">
+            Compassionate, whole-person counseling led by Dr. Sierra Barnes, Ph.D., LPC, LPC-S. Serving clients in South Carolina &amp; Texas in-office and via telehealth.
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="md:col-span-3 space-y-3 text-sm">
+          <p class="text-xs uppercase tracking-[0.16em] text-coral-brand">Explore</p>
+          <ul class="space-y-2 text-eucalyptus/85">
+            <li><a href="#home" data-page-link="home" class="hover:text-ivory transition-colors">Home</a></li>
+            <li><a href="#about" data-page-link="about" class="hover:text-ivory transition-colors">About Dr. Barnes</a></li>
+            <li><a href="#services-page" data-page-link="services" class="hover:text-ivory transition-colors">Counseling Services</a></li>
+            <li><a href="#approach" data-page-link="approach" class="hover:text-ivory transition-colors">Our Approach</a></li>
+            <li><a href="#community" data-page-link="community" class="hover:text-ivory transition-colors">Events &amp; Resources</a></li>
+            <li><a href="#contact" data-page-link="home" data-anchor="#contact" class="hover:text-ivory transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Immediate Crisis Note -->
+        <div class="md:col-span-4 space-y-3 text-sm">
+          <p class="text-xs uppercase tracking-[0.16em] text-coral-brand">Connect</p>
+          <p class="text-eucalyptus/90">Phone: <a href="tel:8039005619" class="hover:text-ivory underline decoration-eucalyptus/30">803-900-5619</a></p>
+          <p class="text-eucalyptus/90 break-all">Email: <a href="mailto:counseling.holistic.healing@gmail.com" class="hover:text-ivory underline decoration-eucalyptus/30">counseling.holistic.healing@gmail.com</a></p>
+          <div class="pt-3 mt-3 border-t border-eucalyptus/15 text-xs text-eucalyptus/75 leading-relaxed">
+            In a crisis? Dial <strong class="text-ivory">911</strong>, call or text <strong class="text-ivory">988</strong> (Suicide &amp; Crisis Lifeline), or text <strong class="text-ivory">HOME</strong> to <strong class="text-ivory">741741</strong>.
+            <a href="#community" data-page-link="community" class="block mt-1 text-coral-brand hover:underline">View full crisis directory &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright & Privacy Bar -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-eucalyptus/65">
+        <p>&copy; <span id="current-year">2026</span> Holistic Healing: Counseling &amp; Consulting, LLC. All rights reserved.</p>
+        <div class="flex items-center gap-5">
+          <button type="button" id="privacy-btn" class="hover:text-ivory transition-colors">Privacy Notice</button>
+          <span>SC &amp; TX Licensed Practice</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Gentle Privacy Notice Modal (No alert/confirm) -->
+  <div id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title" class="hidden fixed inset-0 z-[70] bg-forest-deep/55 backdrop-blur-sm flex items-center justify-center p-5">
+    <div class="bg-ivory text-charcoal max-w-md w-full p-7 rounded-3xl shadow-xl space-y-4">
+      <div class="flex items-center justify-between">
+        <h2 id="privacy-modal-title" class="font-serif text-xl text-forest">Privacy Notice</h2>
+        <button type="button" id="privacy-close-btn" aria-label="Close privacy notice" class="w-8 h-8 rounded-full bg-eucalyptus text-forest flex items-center justify-center hover:bg-sage-soft/60">&times;</button>
+      </div>
+      <p class="text-sm text-charcoal-muted leading-relaxed">
+        Information submitted through the general contact form is used solely to respond to your consultation inquiry. Please do not submit confidential medical or mental health history through standard website forms or email.
+      </p>
+      <p class="text-sm text-charcoal-muted leading-relaxed">
+        Full Notice of Privacy Practices and informed consent documentation are provided prior to beginning clinical services.
+      </p>
+    </div>
+  </div>
+
+  <!-- Gentle Consultation Pop-Up CTA (Reappears 20s after being cancelled) -->
+  <div id="cta-popup-modal" role="dialog" aria-modal="true" aria-labelledby="cta-popup-title" class="hidden fixed inset-0 z-[75] bg-forest-deep/50 backdrop-blur-sm flex items-center justify-center p-5 transition-opacity duration-300">
+    <div class="relative overflow-hidden bg-ivory text-charcoal max-w-md w-full p-7 sm:p-9 organic-pill-a border border-coral-brand/25 shadow-[0_24px_60px_rgba(24,43,34,0.22)] text-center space-y-5">
+      <!-- Soft Ambient Blush Wash -->
+      <div aria-hidden="true" class="pointer-events-none absolute -top-12 -right-12 w-36 h-36 rounded-full bg-blush-soft/85 blur-2xl"></div>
+      <div aria-hidden="true" class="pointer-events-none absolute -bottom-12 -left-12 w-36 h-36 rounded-full bg-eucalyptus/75 blur-2xl"></div>
+
+      <!-- Cancel / Close Button -->
+      <button type="button" id="cta-popup-close" aria-label="Close consultation invitation" class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-eucalyptus/80 text-forest flex items-center justify-center hover:bg-blush-soft hover:text-rose-brand transition-colors">
+        &times;
+      </button>
+
+      <!-- Official Emblem -->
+      <div class="relative z-10 flex justify-center pt-1">
+        <svg viewBox="0 0 180 120" class="w-14 h-10" aria-hidden="true">
+          <path d="M90 83 C86 79 60 54 60 32 C60 18 71 10 81 13 C86 15 89 19 90 23 C91 19 94 15 99 13 C109 10 120 18 120 32 C120 54 94 79 90 83 Z" fill="#E97676" />
+          <path d="M87 112 C88 100 86 87 77 77 C69 68 57 62 46 57 C43 56 42 60 45 63 C52 69 60 74 60 82 C60 90 50 94 38 90 C28 86 19 77 12 69 C9 66 5 69 8 73 C14 82 22 94 31 99 C48 105 68 108 87 112 Z" fill="#C84B75" />
+          <path d="M35 84 C27 76 20 65 18 52 C26 57 33 68 35 84 Z" fill="#C84B75" />
+          <path d="M40 82 C34 73 30 62 30 51 C38 57 42 68 40 82 Z" fill="#C84B75" />
+          <path d="M45 84 C43 74 42 64 46 55 C51 63 51 74 45 84 Z" fill="#C84B75" />
+          <path d="M93 112 C92 100 94 87 103 77 C111 68 123 62 134 57 C137 56 138 60 135 63 C128 69 120 74 120 82 C120 90 130 94 142 90 C152 86 161 77 168 69 C171 66 175 69 172 73 C166 82 158 94 149 99 C132 105 112 108 93 112 Z" fill="#C84B75" />
+          <path d="M145 84 C153 76 160 65 162 52 C154 57 147 68 145 84 Z" fill="#C84B75" />
+          <path d="M140 82 C146 73 150 62 150 51 C142 57 138 68 140 82 Z" fill="#C84B75" />
+          <path d="M135 84 C137 74 138 64 134 55 C129 63 129 74 135 84 Z" fill="#C84B75" />
+        </svg>
+      </div>
+
+      <div class="relative z-10 space-y-2.5">
+        <p class="text-[11px] uppercase tracking-[0.16em] text-rose-brand">Complimentary Initial Call</p>
+        <h2 id="cta-popup-title" class="font-serif text-2xl text-forest leading-snug">
+          Ready to take the first gentle step?
+        </h2>
+        <p class="text-sm text-charcoal-muted leading-relaxed">
+          Schedule a free consultation with Dr. Sierra Barnes to explore in-office or telehealth counseling in South Carolina &amp; Texas.
+        </p>
+      </div>
+
+      <div class="relative z-10 flex flex-col gap-2.5 pt-1">
+        <a href="#contact" id="cta-popup-action" class="w-full inline-flex items-center justify-center gap-2 bg-forest text-ivory text-sm px-6 py-3.5 rounded-full hover:bg-rose-brand transition-colors shadow-sm">
+          <span>Book a Free Consultation</span>
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 10h12M11 5l5 5-5 5" />
+          </svg>
+        </a>
+        <button type="button" id="cta-popup-cancel" class="w-full text-xs text-charcoal-muted hover:text-rose-brand py-2 rounded-full transition-colors">
+          Maybe later
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       INTERACTIVE APPLICATION SCRIPT
+       ========================================================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set current year in footer
+      const yearEl = document.getElementById('current-year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // -------------------------------------------------------
+      // 1. Mobile Navigation Drawer
+      // -------------------------------------------------------
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIconOpen = document.getElementById('menu-icon-open');
+      const menuIconClose = document.getElementById('menu-icon-close');
+
+      function setMobileMenu(isOpen) {
+        if (!mobileMenu || !mobileMenuBtn) return;
+        mobileMenu.classList.toggle('hidden', !isOpen);
+        mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+        if (menuIconOpen && menuIconClose) {
+          menuIconOpen.classList.toggle('hidden', isOpen);
+          menuIconClose.classList.toggle('hidden', !isOpen);
+        }
+      }
+
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+          const isCurrentlyHidden = mobileMenu.classList.contains('hidden');
+          setMobileMenu(isCurrentlyHidden);
+        });
+      }
+
+      // -------------------------------------------------------
+      // 2. Multi-View Page Navigation
+      // -------------------------------------------------------
+      const pages = {
+        home: document.getElementById('page-home'),
+        about: document.getElementById('page-about'),
+        services: document.getElementById('page-services'),
+        approach: document.getElementById('page-approach'),
+        community: document.getElementById('page-community')
+      };
+
+      const footerWaveWrap = document.getElementById('footer-wave-wrap');
+
+      function showPage(pageKey, anchorSelector = null) {
+        if (!pages[pageKey]) pageKey = 'home';
+
+        Object.entries(pages).forEach(([key, el]) => {
+          if (!el) return;
+          el.classList.toggle('active', key === pageKey);
+        });
+
+        // Match footer wave background to active page bottom section
+        if (footerWaveWrap) {
+          footerWaveWrap.classList.toggle('bg-eucalyptus', pageKey === 'home');
+          footerWaveWrap.classList.toggle('bg-ivory', pageKey !== 'home');
+        }
+
+        // Update active desktop nav link styling
+        document.querySelectorAll('.nav-link').forEach((link) => {
+          const targetPage = link.getAttribute('data-page-link');
+          const hasAnchor = link.hasAttribute('data-anchor');
+          const isActive = targetPage === pageKey && !hasAnchor;
+          link.classList.toggle('text-forest', isActive);
+          link.classList.toggle('font-medium', isActive);
+          link.classList.toggle('text-charcoal-muted', !isActive);
+        });
+
+        setMobileMenu(false);
+
+        if (anchorSelector) {
+          setTimeout(() => {
+            const target = document.querySelector(anchorSelector);
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 60);
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }
+
+      document.querySelectorAll('[data-page-link]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const pageKey = link.getAttribute('data-page-link');
+          const anchor = link.getAttribute('data-anchor');
+          showPage(pageKey, anchor);
+        });
+      });
+
+      // Initialize footer wave color for Home
+      if (footerWaveWrap) {
+        footerWaveWrap.classList.remove('bg-ivory');
+        footerWaveWrap.classList.add('bg-eucalyptus');
+      }
+
+      // -------------------------------------------------------
+      // 3. Guided 4-4-4 Mindful Breathing Visualizer
+      // -------------------------------------------------------
+      const breathAura = document.getElementById('breath-aura');
+      const breathRingInner = document.getElementById('breath-ring-inner');
+      const breathLabel = document.getElementById('breath-label');
+      const breathTimer = document.getElementById('breath-timer');
+      const breathToggleBtn = document.getElementById('breath-toggle-btn');
+      const breathBtnText = document.getElementById('breath-btn-text');
+
+      let breathingActive = false;
+      let breathInterval = null;
+      let phaseIndex = 0;
+
+      const breathPhases = [
+        { name: 'Inhale Softly', cls: 'inhale', note: '4 seconds in' },
+        { name: 'Hold Gently', cls: 'hold', note: '4 seconds still' },
+        { name: 'Exhale Slowly', cls: 'exhale', note: '4 seconds out' }
+      ];
+
+      function runBreathPhase() {
+        const phase = breathPhases[phaseIndex];
+        [breathAura, breathRingInner].forEach((el) => {
+          if (!el) return;
+          el.classList.remove('inhale', 'hold', 'exhale');
+          el.classList.add(phase.cls);
+        });
+        if (breathLabel) breathLabel.textContent = phase.name;
+        if (breathTimer) breathTimer.textContent = phase.note;
+        phaseIndex = (phaseIndex + 1) % breathPhases.length;
+      }
+
+      function stopBreathing() {
+        breathingActive = false;
+        clearInterval(breathInterval);
+        [breathAura, breathRingInner].forEach((el) => {
+          if (el) el.classList.remove('inhale', 'hold', 'exhale');
+        });
+        if (breathLabel) breathLabel.textContent = 'Pause & Breathe';
+        if (breathTimer) breathTimer.textContent = '4 • 4 • 4 rhythm';
+        if (breathBtnText) breathBtnText.textContent = 'Try a Guided Breath';
+      }
+
+      if (breathToggleBtn) {
+        breathToggleBtn.addEventListener('click', () => {
+          if (breathingActive) {
+            stopBreathing();
+          } else {
+            breathingActive = true;
+            phaseIndex = 0;
+            if (breathBtnText) breathBtnText.textContent = 'Pause Breathing';
+            runBreathPhase();
+            breathInterval = setInterval(runBreathPhase, 4000);
+          }
+        });
+      }
+
+      // -------------------------------------------------------
+      // 4. Visual-First Mood Explorer ("A Space to Exhale")
+      // -------------------------------------------------------
+      const moodData = {
+        anxiety: {
+          line: 'You don’t have to carry racing thoughts alone—calm can be practiced one gentle breath at a time.',
+          svg: `<svg viewBox="0 0 120 120" class="w-28 h-28" role="img" aria-label="Calm horizon illustration"><circle cx="60" cy="54" r="22" fill="#E97676" fill-opacity="0.32" /><path d="M18,72 C38,60 60,78 82,68 C92,64 98,66 104,70" fill="none" stroke="#223B2F" stroke-width="1.5" stroke-linecap="round"/><path d="M24,84 C46,76 72,88 96,80" fill="none" stroke="#8EA38E" stroke-width="1.5" stroke-linecap="round"/></svg>`
+        },
+        grief: {
+          line: 'Grief deserves unhurried room to breathe—honoring love while gently finding your footing again.',
+          svg: `<svg viewBox="0 0 120 120" class="w-28 h-28" role="img" aria-label="Floating lotus illustration"><path d="M60,80 C46,66 48,44 60,30 C72,44 74,66 60,80 Z" fill="#E97676" fill-opacity="0.32" stroke="#223B2F" stroke-width="1.3"/><path d="M60,80 C38,74 28,58 32,44 C46,50 54,64 60,80 Z" fill="#8EA38E" fill-opacity="0.4" stroke="#223B2F" stroke-width="1.3"/><path d="M60,80 C82,74 92,58 88,44 C74,50 66,64 60,80 Z" fill="#8EA38E" fill-opacity="0.4" stroke="#223B2F" stroke-width="1.3"/><path d="M26,88 C48,82 72,82 94,88" fill="none" stroke="#223B2F" stroke-width="1.3" stroke-linecap="round"/></svg>`
+        },
+        relationships: {
+          line: 'Healthy connection begins with honest boundaries, steadier listening, and mutual care.',
+          svg: `<svg viewBox="0 0 120 120" class="w-28 h-28" role="img" aria-label="Overlapping circles and sprout illustration"><circle cx="48" cy="60" r="24" fill="#E2EAE2" fill-opacity="0.7" stroke="#223B2F" stroke-width="1.4"/><circle cx="72" cy="60" r="24" fill="#F6E6EA" fill-opacity="0.75" stroke="#C84B75" stroke-width="1.4"/><path d="M60,86 V48" stroke="#223B2F" stroke-width="1.3" stroke-linecap="round"/><path d="M60,54 C52,48 52,38 60,32 C68,38 68,48 60,54 Z" fill="#8EA38E" fill-opacity="0.55"/></svg>`
+        },
+        trauma: {
+          line: 'Healing past wounds happens safely and collaboratively—never rushed, always at your pace.',
+          svg: `<svg viewBox="0 0 120 120" class="w-28 h-28" role="img" aria-label="Protective botanical shield illustration"><path d="M60,22 L90,34 V58 C90,78 76,92 60,98 C44,92 30,78 30,58 V34 L60,22 Z" fill="#E2EAE2" fill-opacity="0.6" stroke="#223B2F" stroke-width="1.4"/><path d="M60,78 V44" stroke="#223B2F" stroke-width="1.3"/><path d="M60,64 C48,60 44,50 50,44 C58,48 60,56 60,64 Z" fill="#E97676" fill-opacity="0.4"/><path d="M60,56 C72,52 76,42 70,36 C62,40 60,48 60,56 Z" fill="#8EA38E" fill-opacity="0.55"/></svg>`
+        },
+        overwhelm: {
+          line: 'When everything feels heavy at once, we slow down and untangle one thread at a time.',
+          svg: `<svg viewBox="0 0 120 120" class="w-28 h-28" role="img" aria-label="Balanced river stones illustration"><ellipse cx="60" cy="84" rx="28" ry="10" fill="#8EA38E" fill-opacity="0.45" stroke="#223B2F" stroke-width="1.3"/><ellipse cx="60" cy="65" rx="20" ry="9" fill="#E97676" fill-opacity="0.32" stroke="#223B2F" stroke-width="1.3"/><ellipse cx="60" cy="48" rx="13" ry="7" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.3"/></svg>`
+        }
+      };
+
+      const moodIllustration = document.getElementById('mood-illustration');
+      const moodLine = document.getElementById('mood-line');
+      const moodPills = document.querySelectorAll('.mood-pill');
+
+      function selectMood(key) {
+        const item = moodData[key];
+        if (!item) return;
+        if (moodIllustration) moodIllustration.innerHTML = item.svg;
+        if (moodLine) moodLine.textContent = item.line;
+        moodPills.forEach((btn) => {
+          const active = btn.getAttribute('data-mood') === key;
+          btn.setAttribute('aria-selected', String(active));
+          btn.classList.toggle('bg-forest', active);
+          btn.classList.toggle('text-ivory', active);
+          btn.classList.toggle('bg-ivory/85', !active);
+          btn.classList.toggle('text-forest', !active);
+        });
+      }
+
+      moodPills.forEach((btn) => {
+        btn.addEventListener('click', () => selectMood(btn.getAttribute('data-mood')));
+      });
+      selectMood('anxiety');
+
+      // -------------------------------------------------------
+      // 5. Therapeutic Approach Interactive Explorer
+      // -------------------------------------------------------
+      const modalities = {
+        cbt: {
+          tag: 'Thoughts • Feelings • Actions',
+          title: 'Cognitive Behavioral Therapy (CBT)',
+          desc: 'Helps you gently notice unhelpful thought loops and reshape them into steadier, more compassionate perspectives that support calmer daily choices.',
+          focus: 'In session: noticing & reframing everyday patterns',
+          svg: `<svg viewBox="0 0 140 140" class="w-32 h-32" role="img" aria-label="Botanical triad diagram representing Cognitive Behavioral Therapy">
+            <path d="M70,34 L36,96 L104,96 Z" fill="none" stroke="#C84B75" stroke-width="1.3" stroke-dasharray="4 4"/>
+            <circle cx="70" cy="34" r="16" fill="#E97676" fill-opacity="0.38" stroke="#223B2F" stroke-width="1.4"/>
+            <circle cx="36" cy="96" r="16" fill="#8EA38E" fill-opacity="0.48" stroke="#223B2F" stroke-width="1.4"/>
+            <circle cx="104" cy="96" r="16" fill="#F6E6EA" stroke="#C84B75" stroke-width="1.4"/>
+            <path d="M70,84 C70,68 70,58 70,50" stroke="#223B2F" stroke-width="1.3" stroke-linecap="round"/>
+            <path d="M70,74 C58,70 54,62 60,56 C68,60 70,66 70,74 Z" fill="#8EA38E" fill-opacity="0.6"/>
+            <path d="M70,68 C82,64 86,56 80,50 C72,54 70,60 70,68 Z" fill="#E97676" fill-opacity="0.5"/>
+          </svg>`
+        },
+        tfcbt: {
+          tag: 'Trauma & ACES Recovery',
+          title: 'Trauma-Focused CBT (TF-CBT)',
+          desc: 'A compassionate, structured approach Dr. Barnes loves using to help clients exposed to adverse childhood experiences (ACES) process trauma safely and rebuild resilience.',
+          focus: 'In session: safety, grounding & gentle story integration',
+          svg: `<svg viewBox="0 0 140 140" class="w-32 h-32" role="img" aria-label="Protective heart and botanical shield representing Trauma-Focused CBT">
+            <path d="M70,22 L108,38 V68 C108,92 92,108 70,116 C48,108 32,92 32,68 V38 L70,22 Z" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.4"/>
+            <path d="M70,88 C62,80 50,68 50,56 C50,48 56,43 62,45 C66,46 69,49 70,52 C71,49 74,46 78,45 C84,43 90,48 90,56 C90,68 78,80 70,88 Z" fill="#E97676" fill-opacity="0.48" stroke="#C84B75" stroke-width="1.2"/>
+            <path d="M44,100 C56,94 84,94 96,100" fill="none" stroke="#8EA38E" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>`
+        },
+        act: {
+          tag: 'Values & Psychological Flexibility',
+          title: 'Acceptance & Commitment Therapy (ACT)',
+          desc: 'Encourages making room for difficult emotions without letting them steer your life—reconnecting you with the personal values that matter most.',
+          focus: 'In session: aligning daily steps with personal values',
+          svg: `<svg viewBox="0 0 140 140" class="w-32 h-32" role="img" aria-label="Botanical compass representing Acceptance and Commitment Therapy">
+            <circle cx="70" cy="70" r="42" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.4"/>
+            <circle cx="70" cy="70" r="32" fill="none" stroke="#E97676" stroke-width="1.1" stroke-dasharray="3 5"/>
+            <polygon points="70,34 80,70 70,106 60,70" fill="#E97676" fill-opacity="0.45" stroke="#C84B75" stroke-width="1.2"/>
+            <polygon points="34,70 70,62 106,70 70,78" fill="#8EA38E" fill-opacity="0.42" stroke="#223B2F" stroke-width="1.2"/>
+            <circle cx="70" cy="70" r="5" fill="#223B2F"/>
+          </svg>`
+        },
+        dbt: {
+          tag: 'Emotional Regulation & Balance',
+          title: 'Dialectical Behavioral Therapy (DBT)',
+          desc: 'Builds practical skills in mindfulness, distress tolerance, emotion regulation, and healthy interpersonal boundaries.',
+          focus: 'In session: balancing self-acceptance with steady change',
+          svg: `<svg viewBox="0 0 140 140" class="w-32 h-32" role="img" aria-label="Overlapping balanced circles representing Dialectical Behavioral Therapy">
+            <circle cx="52" cy="70" r="30" fill="#8EA38E" fill-opacity="0.42" stroke="#223B2F" stroke-width="1.4"/>
+            <circle cx="88" cy="70" r="30" fill="#E97676" fill-opacity="0.35" stroke="#C84B75" stroke-width="1.4"/>
+            <path d="M70,94 V46" stroke="#223B2F" stroke-width="1.3" stroke-linecap="round"/>
+            <path d="M70,64 C60,56 62,44 70,38 C78,44 80,56 70,64 Z" fill="#F8F5EE" stroke="#223B2F" stroke-width="1.2"/>
+          </svg>`
+        },
+        sfbt: {
+          tag: 'Strengths & Forward Momentum',
+          title: 'Solution-Focused Therapy',
+          desc: 'Centers on your existing strengths and practical next steps—clarifying what a healthier tomorrow looks like and how to move toward it.',
+          focus: 'In session: clarifying strengths & realistic next steps',
+          svg: `<svg viewBox="0 0 140 140" class="w-32 h-32" role="img" aria-label="Rising botanical path representing Solution-Focused Therapy">
+            <circle cx="98" cy="40" r="16" fill="#E97676" fill-opacity="0.38"/>
+            <path d="M26,106 C50,94 64,72 96,42" fill="none" stroke="#223B2F" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="M82,40 L98,41 L94,57" fill="none" stroke="#C84B75" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M56,82 C42,78 38,66 46,60 C56,64 58,74 56,82 Z" fill="#8EA38E" fill-opacity="0.55" stroke="#223B2F" stroke-width="1.2"/>
+            <path d="M72,66 C86,62 90,52 82,46 C72,50 70,58 72,66 Z" fill="#E97676" fill-opacity="0.45" stroke="#C84B75" stroke-width="1.2"/>
+          </svg>`
+        },
+        exposure: {
+          tag: 'Gradual, Supported Courage',
+          title: 'Exposure Therapy',
+          desc: 'Helps reduce the power of fear and avoidance through gradual, supported steps that build confidence and nervous-system safety.',
+          focus: 'In session: expanding comfort zones at a safe pace',
+          svg: `<svg viewBox="0 0 140 140" class="w-32 h-32" role="img" aria-label="Expanding calm rings representing Exposure Therapy">
+            <circle cx="70" cy="70" r="44" fill="none" stroke="#223B2F" stroke-width="1.2" stroke-dasharray="4 5"/>
+            <circle cx="70" cy="70" r="30" fill="#8EA38E" fill-opacity="0.25" stroke="#8EA38E" stroke-width="1.4"/>
+            <circle cx="70" cy="70" r="16" fill="#E97676" fill-opacity="0.48" stroke="#C84B75" stroke-width="1.3"/>
+            <path d="M70,70 L102,42" stroke="#C84B75" stroke-width="1.4" stroke-linecap="round"/>
+            <circle cx="102" cy="42" r="4" fill="#C84B75"/>
+          </svg>`
+        },
+        mindfulness: {
+          tag: 'Present-Moment Grounding',
+          title: 'Intentional Mindfulness',
+          desc: 'Woven throughout sessions using breath, body awareness, and grounding practices to help quiet overthinking and anchor you in the present.',
+          focus: 'In session: breathwork, stillness & body awareness',
+          svg: `<svg viewBox="0 0 140 140" class="w-32 h-32" role="img" aria-label="Blooming lotus and calm water ripples representing Intentional Mindfulness">
+            <path d="M70,92 C54,74 56,44 70,28 C84,44 86,74 70,92 Z" fill="#E97676" fill-opacity="0.42" stroke="#C84B75" stroke-width="1.3"/>
+            <path d="M70,92 C44,86 32,66 36,50 C52,56 62,72 70,92 Z" fill="#8EA38E" fill-opacity="0.48" stroke="#223B2F" stroke-width="1.3"/>
+            <path d="M70,92 C96,86 108,66 104,50 C88,56 78,72 70,92 Z" fill="#8EA38E" fill-opacity="0.48" stroke="#223B2F" stroke-width="1.3"/>
+            <path d="M28,100 C54,92 86,92 112,100" fill="none" stroke="#223B2F" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M44,110 C60,105 80,105 96,110" fill="none" stroke="#C84B75" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>`
+        }
+      };
+
+      const modVisual = document.getElementById('modality-visual');
+      const modTag = document.getElementById('modality-tag');
+      const modTitle = document.getElementById('modality-title');
+      const modDesc = document.getElementById('modality-desc');
+      const modFocus = document.getElementById('modality-focus');
+      const modBtns = document.querySelectorAll('.modality-btn');
+
+      function selectModality(key) {
+        const m = modalities[key];
+        if (!m) return;
+        if (modVisual) modVisual.innerHTML = m.svg;
+        if (modTag) modTag.textContent = m.tag;
+        if (modTitle) modTitle.textContent = m.title;
+        if (modDesc) modDesc.textContent = m.desc;
+        if (modFocus) modFocus.textContent = m.focus;
+        modBtns.forEach((btn) => {
+          const active = btn.getAttribute('data-modality') === key;
+          btn.setAttribute('aria-selected', String(active));
+          btn.classList.toggle('bg-forest', active);
+          btn.classList.toggle('text-ivory', active);
+          btn.classList.toggle('shadow-sm', active);
+          btn.classList.toggle('bg-ivory/90', !active);
+          btn.classList.toggle('text-forest', !active);
+          btn.classList.toggle('border', !active);
+          btn.classList.toggle('border-coral-brand/20', !active);
+          const dot = btn.querySelector('.modality-dot');
+          if (dot) {
+            dot.classList.toggle('bg-coral-brand', active);
+            dot.classList.toggle('bg-coral-brand/35', !active);
+          }
+        });
+      }
+
+      modBtns.forEach((btn) => {
+        btn.addEventListener('click', () => selectModality(btn.getAttribute('data-modality')));
+      });
+      selectModality('cbt');
+
+      // -------------------------------------------------------
+      // 6. FAQ Accordion
+      // -------------------------------------------------------
+      document.querySelectorAll('.faq-trigger').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.faq-item');
+          const isOpen = item.getAttribute('data-open') === 'true';
+          item.setAttribute('data-open', String(!isOpen));
+          btn.setAttribute('aria-expanded', String(!isOpen));
+        });
+      });
+
+      // -------------------------------------------------------
+      // 7. Privacy-Conscious Contact Form Handler (No alert())
+      // -------------------------------------------------------
+      const form = document.getElementById('consultation-form');
+      const feedback = document.getElementById('form-feedback');
+
+      if (form && feedback) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = form.querySelector('#client-name').value.trim();
+          const email = form.querySelector('#client-email').value.trim();
+
+          feedback.classList.remove('hidden', 'bg-blush-soft', 'text-rose-brand', 'bg-eucalyptus', 'text-forest');
+
+          if (!name || !email || !email.includes('@')) {
+            feedback.classList.add('bg-blush-soft', 'text-rose-brand');
+            feedback.textContent = 'Please provide your name and a valid email address so Dr. Barnes’s office can reply.';
+            return;
+          }
+
+          feedback.classList.add('bg-eucalyptus', 'text-forest');
+          feedback.textContent = `Thank you, ${name}. Your consultation inquiry is ready—for the fastest response, you may also call 803-900-5619 or email counseling.holistic.healing@gmail.com.`;
+          form.reset();
+        });
+      }
+
+      // -------------------------------------------------------
+      // 8. Privacy Modal & Escape Key Handling
+      // -------------------------------------------------------
+      const privacyBtn = document.getElementById('privacy-btn');
+      const privacyModal = document.getElementById('privacy-modal');
+      const privacyCloseBtn = document.getElementById('privacy-close-btn');
+
+      function setPrivacyModal(open) {
+        if (!privacyModal) return;
+        privacyModal.classList.toggle('hidden', !open);
+      }
+
+      if (privacyBtn) privacyBtn.addEventListener('click', () => setPrivacyModal(true));
+      if (privacyCloseBtn) privacyCloseBtn.addEventListener('click', () => setPrivacyModal(false));
+      if (privacyModal) {
+        privacyModal.addEventListener('click', (e) => {
+          if (e.target === privacyModal) setPrivacyModal(false);
+        });
+      }
+
+      // -------------------------------------------------------
+      // 8B. Consultation Pop-Up CTA (Reappears 20s after cancel)
+      // -------------------------------------------------------
+      const ctaPopupModal = document.getElementById('cta-popup-modal');
+      const ctaPopupClose = document.getElementById('cta-popup-close');
+      const ctaPopupCancel = document.getElementById('cta-popup-cancel');
+      const ctaPopupAction = document.getElementById('cta-popup-action');
+      const CTA_POPUP_DELAY_MS = 20000;
+      let ctaPopupTimer = null;
+
+      function scheduleCtaPopup() {
+        clearTimeout(ctaPopupTimer);
+        ctaPopupTimer = setTimeout(() => {
+          // Avoid overlapping if privacy modal is currently open
+          if (privacyModal && !privacyModal.classList.contains('hidden')) {
+            scheduleCtaPopup();
+            return;
+          }
+          if (ctaPopupModal) {
+            ctaPopupModal.classList.remove('hidden');
+          }
+        }, CTA_POPUP_DELAY_MS);
+      }
+
+      function cancelCtaPopup() {
+        if (!ctaPopupModal || ctaPopupModal.classList.contains('hidden')) return;
+        ctaPopupModal.classList.add('hidden');
+        scheduleCtaPopup();
+      }
+
+      if (ctaPopupClose) ctaPopupClose.addEventListener('click', cancelCtaPopup);
+      if (ctaPopupCancel) ctaPopupCancel.addEventListener('click', cancelCtaPopup);
+      if (ctaPopupModal) {
+        ctaPopupModal.addEventListener('click', (e) => {
+          if (e.target === ctaPopupModal) cancelCtaPopup();
+        });
+      }
+      if (ctaPopupAction) {
+        ctaPopupAction.addEventListener('click', (e) => {
+          e.preventDefault();
+          clearTimeout(ctaPopupTimer);
+          if (ctaPopupModal) ctaPopupModal.classList.add('hidden');
+          showPage('home', '#contact');
+        });
+      }
+
+      // Start initial 20-second timer on page load
+      scheduleCtaPopup();
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          setMobileMenu(false);
+          setPrivacyModal(false);
+          cancelCtaPopup();
+        }
+      });
+
+      // -------------------------------------------------------
+      // 9. Gentle Scroll Reveal Observer
+      // -------------------------------------------------------
+      const revealEls = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        revealEls.forEach((el) => observer.observe(el));
+      } else {
+        revealEls.forEach((el) => el.classList.add('visible'));
+      }
+    });
+  </script>
+</body>
+</html>
