@@ -108,7 +108,19 @@
     /* Mindful 4-4-4 Breathing Orb States */
     .breath-ring {
       transition: transform 4s cubic-bezier(0.4, 0, 0.2, 1), opacity 4s ease;
-      transform: scale(0.86);
+      transform: scale(0.92);
+    }
+    .breath-ring.inhale {
+      transform: scale(1.12);
+      opacity: 0.95;
+    }
+    .breath-ring.hold {
+      transform: scale(1.12);
+      opacity: 0.85;
+    }
+    .breath-ring.exhale {
+      transform: scale(0.88);
+      opacity: 0.7;
     }
     .breath-ring.inhale {
       transform: scale(1.16);
@@ -362,20 +374,20 @@
             <div class="lg:col-span-5 flex flex-col items-center text-center">
               <span class="text-xs uppercase tracking-[0.18em] text-rose-brand mb-3">A Space to Exhale</span>
 
-              <div class="relative w-56 h-56 sm:w-64 sm:h-64 flex items-center justify-center">
+              <div class="relative w-64 h-64 sm:w-72 sm:h-72 flex items-center justify-center">
                 <!-- Outer Animated Breathing Aura -->
-                <div id="breath-aura" aria-hidden="true" class="breath-ring absolute inset-5 rounded-full bg-gradient-to-br from-sage-soft/45 via-blush-soft/55 to-eucalyptus/70"></div>
-                <div id="breath-ring-inner" aria-hidden="true" class="breath-ring absolute inset-11 rounded-full border border-forest/20 bg-ivory/75 backdrop-blur-sm"></div>
+                <div id="breath-aura" aria-hidden="true" class="breath-ring absolute inset-3 rounded-full bg-gradient-to-br from-sage-soft/45 via-blush-soft/55 to-eucalyptus/70"></div>
+                <div id="breath-ring-inner" aria-hidden="true" class="breath-ring absolute inset-8 sm:inset-9 rounded-full border border-forest/20 bg-ivory/80 backdrop-blur-sm"></div>
 
-                <!-- Center Botanical Lotus Emblem & Phase Cue -->
-                <div class="relative z-10 flex flex-col items-center justify-center px-4">
-                  <svg viewBox="0 0 80 60" class="w-14 h-11 mb-1.5" aria-hidden="true">
+                <!-- Center Botanical Lotus Emblem & Phase Cue (Cleanly Contained Inside Circle) -->
+                <div class="relative z-10 flex flex-col items-center justify-center max-w-[136px] sm:max-w-[152px] px-2 text-center">
+                  <svg viewBox="0 0 80 60" class="w-11 h-8 sm:w-12 sm:h-9 mb-1 shrink-0" aria-hidden="true">
                     <path d="M40,48 C28,42 20,30 22,18 C32,22 38,34 40,48 Z" fill="#8EA38E" fill-opacity="0.5" stroke="#223B2F" stroke-width="1.2" />
                     <path d="M40,48 C52,42 60,30 58,18 C48,22 42,34 40,48 Z" fill="#8EA38E" fill-opacity="0.5" stroke="#223B2F" stroke-width="1.2" />
                     <path d="M40,48 C30,36 32,20 40,10 C48,20 50,36 40,48 Z" fill="#E97676" fill-opacity="0.38" stroke="#223B2F" stroke-width="1.2" />
                   </svg>
-                  <p id="breath-label" class="font-serif text-lg text-forest">Pause &amp; Breathe</p>
-                  <p id="breath-timer" class="text-xs text-charcoal-muted mt-0.5">4 &bull; 4 &bull; 4 rhythm</p>
+                  <p id="breath-label" class="font-serif text-base sm:text-[1.05rem] leading-tight text-forest">Pause &amp; Breathe</p>
+                  <p id="breath-timer" class="text-[11px] sm:text-xs text-charcoal-muted mt-1 leading-tight">4 &bull; 4 &bull; 4 rhythm</p>
                 </div>
               </div>
 
@@ -666,7 +678,7 @@
                   <!-- Circular Masked Photograph with Smooth Hover Zoom -->
                   <div class="relative z-10 w-52 h-52 sm:w-60 sm:h-60 rounded-full overflow-hidden border-4 border-ivory shadow-[0_18px_40px_rgba(34,59,47,0.12)] float-slow">
                     <img
-                      src="https://raw.githubusercontent.com/CreativeTugsDotCom/UUF/refs/heads/main/389f8759-42d1-46a2-bb2b-3c31eb014e6d.jpg"
+                      src="https://raw.githubusercontent.com/CreativeTugsDotCom/OMN/refs/heads/main/c680fd73-c0de-4ea5-b6fa-88acd29393ed.webp"
                       alt="Warm editorial imagery symbolizing peace, reflection, and holistic healing"
                       class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                       onerror="this.src='https://placehold.co/500x500/F6E6EA/223B2F?text=Holistic+Healing'"
